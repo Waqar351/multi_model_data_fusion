@@ -1,0 +1,114 @@
+import pandas as pd
+import re
+import torch
+# Defining self loops in graph
+from torch_geometric.utils import add_self_loops
+import numpy as np
+import random
+from torch_geometric.utils import to_undirected
+
+def label_crime_nodes(df, threshold=5):
+    """
+    Generate a binary crime label for each node based on monthly crime counts.
+    
+    Parameters
+    ----------
+    df : pd.DataFrame
+        Input DataFrame containing monthly crime counts per node.
+    threshold : int or float
+        Threshold for labeling a node as 'crime' (1) or 'no crime' (0).
+    
+    Returns
+    -------
+    pd.DataFrame
+        Original DataFrame with added 'total_crimes' and 'crime_label' columns.
+    """
+    # Detect columns that match the pattern YYYY.MM (e.g., 2006.01, 2017.12)
+    month_cols = [col for col in df.columns if re.match(r'^\d{4}\.\d{2}$', col)]
+    
+    # breakpoint()
+    if not month_cols:
+        raise ValueError("No month columns found in format YYYY.MM")
+    
+    # Compute total crime count across all months
+    df['total_crimes'] = df[month_cols].sum(axis=1)
+    
+    # Create binary label: 1 = crime, 0 = no crime
+    df['crime_label'] = (df['total_crimes'] > threshold).astype(int)
+    
+    return df
+
+def mapping_edge_index(edge_index, mapping_dict):
+    # Convertir a numpy para operaciones más eficientes
+    edges_np = edge_index.numpy()
+
+    # Vectorizar el mapeo usando pandas (más rápido que un bucle)
+    df_edges = pd.DataFrame(edges_np)
+    edges_mapeados = df_edges.applymap(lambda x: mapping_dict.get(x, x)).values
+
+    # Convertir de vuelta a tensor
+    return torch.tensor(edges_mapeados, dtype=torch.long)
+
+def map_edges_new_index(df_nodes, df_edges ):
+    
+    # Step 1: Get unique node IDs (from your main crime dataframe)
+    unique_ids = df_nodes['Nodo'].unique()
+
+    # Step 2: Create a new DataFrame for mapping
+    mapping = pd.DataFrame({
+        'ID_Original': unique_ids,
+        'ID_Equivalente': range(len(unique_ids))  # Assign consecutive integers
+    })
+
+    dict_mapeo = dict(zip(mapping['ID_Original'], mapping['ID_Equivalente']))
+
+
+    ###############################
+
+    # Create a boolean mask
+    mask = df_edges['Nodo1'].isin(df_nodes['Nodo']) & df_edges['Nodo2'].isin(df_nodes['Nodo'])
+
+    # Filter df_edges using the mask
+    df_edges_filtrado = df_edges[mask]
+
+    df_edges = df_edges_filtrado
+
+
+    # Extract columns 'Nodo1' and 'Nodo2'
+    edges = df_edges[['Nodo1', 'Nodo2']].values
+
+    # Convert to a PyTorch tensor
+    edges_tensor = torch.tensor(edges, dtype=torch.long)
+
+    # Transpose the tensor to have shape (2, num_edges)
+    edges_tensor = edges_tensor.t().contiguous()
+
+    print(edges_tensor)
+    edges_tensor.shape
+
+    # Aplicar el mapeo
+    edge_index_mapeado = mapping_edge_index(edges_tensor, dict_mapeo)
+    print("edge_index_mapeado -------> ", edge_index_mapeado)
+
+    edge_index = edge_index_mapeado
+
+    num_nodes = num_nodes = len(unique_ids)
+
+
+    
+
+    edge_index, _ = add_self_loops(edge_index, num_nodes=num_nodes)
+    edge_index = to_undirected(edge_index)
+
+    return edge_index
+
+# ==========================================================
+# 1. Reproducibility Setup
+# ==========================================================
+def set_seed(seed=42):
+    torch.manual_seed(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False

@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "data-fusion"
+version = "0.1.0"
+description = ""
+authors = ["Waqar351 <waqar_comsat@yahoo.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^2.3.1"
+pandas = "^2.3.0"
+ipykernel = "^6.29.5"
+torch = "^2.7.1"
+torch-geometric = "^2.6.1"
+optuna = "^4.4.0"
+statsmodels = "^0.14.4"
+matplotlib = "^3.10.3"
+scikit-learn = "^1.7.0"
+seaborn = "^0.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
