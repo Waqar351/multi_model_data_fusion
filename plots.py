@@ -21,3 +21,24 @@ def plot_crime_vs_nocrime_ratio(data):
     plt.ylabel('Percentage (%)')
     plt.title('Crime vs No Crime')
     plt.show()
+
+def plot_train_val_curves(train_losses, val_accs):
+    # ==========================================================
+    # Plot Training Curves
+    # ==========================================================
+    plt.figure(figsize=(10,4))
+    plt.subplot(1,2,1)
+    plt.plot(train_losses, label='Train Loss', color='royalblue')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.title('Training Loss Curve')
+    plt.legend()
+
+    plt.subplot(1,2,2)
+    plt.plot(val_accs, label='Validation Accuracy', color='darkorange')
+    plt.xlabel('Epoch')
+    plt.ylabel('Accuracy')
+    plt.title('Validation Accuracy Curve')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
