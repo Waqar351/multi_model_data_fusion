@@ -15,6 +15,7 @@ import sys
 from helper_funcs import *
 from plots import *
 from models import *
+from model_helper_funcs import *
 
 # ----------------------------------------------------------
 # 1. Configuration
