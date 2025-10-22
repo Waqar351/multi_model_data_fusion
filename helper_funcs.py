@@ -6,6 +6,8 @@ from torch_geometric.utils import add_self_loops
 import numpy as np
 import random
 from torch_geometric.utils import to_undirected
+from torch_geometric.data import Data
+
 
 def label_crime_nodes(df, threshold=5):
     """
@@ -112,3 +114,30 @@ def set_seed(seed=42):
     torch.cuda.manual_seed_all(seed)
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
+
+# ----------------------------------------------------------
+# 7. Utility function: prepare data dynamically
+# ----------------------------------------------------------
+def prepare_data(mode, data_static, data_dynamic):
+    """Return Data object based on chosen mode."""
+    if mode == "static":
+        print("➡️ Using static features only.")
+        return data_static
+    elif mode == "dynamic":
+        print("➡️ Using dynamic features only.")
+        return data_dynamic
+    # elif mode == "separate":
+    #     print("➡️ Using dynamic features only.")
+    #     return data_static, data_dynamic
+    elif mode == "both":
+        print("➡️ Using combined static + dynamic features.")
+        combined_x = torch.cat([data_static.x, data_dynamic.x], dim=1)
+        data_combined = Data(
+            x=combined_x,
+            edge_index=data_static.edge_index,
+            y=data_static.y
+        )
+        # copy masks later
+        return data_combined
+    else:
+        raise ValueError(f"Unknown data mode: {mode}")

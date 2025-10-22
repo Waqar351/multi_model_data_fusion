@@ -22,11 +22,13 @@ from model_helper_funcs import *
 # ----------------------------------------------------------
 set_seed(42)
 
-loss_func = "MSE"        # "MSE" | "MAE" | "Huber"
 data_set = "real"         # "real" | "artificial"
 type_graph_conv = "SAGE"  # "SAGE" | "GCN" | "GAT"
-data_mode = "dynamic"        # "static" | "dynamic" | "both" | "separate"
+data_mode = "dynamic"        # "static" | "dynamic" | "both" |
 print(f"Selected data mode: {data_mode}")
+
+output_folder = f"results/{type_graph_conv}"
+os.makedirs(output_folder, exist_ok=True)
 
 # ----------------------------------------------------------
 # 2. Load dataset
@@ -47,6 +49,7 @@ edge_index = map_edges_new_index(df_nodes, df_edges)
 # ----------------------------------------------------------
 df_nodes_label = label_crime_nodes(df_nodes, threshold=5)
 crime_label_col = "crime_label"
+num_nodes = df_nodes_label.shape[0]
 
 # ----------------------------------------------------------
 # 4. Extract feature groups
@@ -85,13 +88,13 @@ crime_label_tensor = torch.tensor(crime_labels.values, dtype=torch.long)
 
 data_dynamic = Data(x=dynamic_tensor, edge_index=edge_index, y=crime_label_tensor)
 data_static = Data(x=static_tensor, edge_index=edge_index, y=crime_label_tensor)
+data_mask = Data(x=torch.empty((num_nodes, 0)), edge_index=torch.empty((2, 0), dtype=torch.long)) # empty feature matrix (no features)
 
 
 
 # ----------------------------------------------------------
 # 8. Train / Validation / Test split
 # ----------------------------------------------------------
-num_nodes = df_nodes_label.shape[0]
 num_train = int(0.6 * num_nodes)
 num_val = int(0.2 * num_nodes)
 num_test = num_nodes - num_train - num_val
@@ -109,30 +112,30 @@ test_mask[perm[num_train+num_val:]] = True
 # ----------------------------------------------------------
 # 9. Select data mode and attach masks
 # ----------------------------------------------------------
-data_selected = prepare_data(data_mode, data_static, data_dynamic)
-data_selected.train_mask = train_mask
-data_selected.val_mask = val_mask
-data_selected.test_mask = test_mask
+data_mask.train_mask = train_mask
+data_mask.val_mask = val_mask
+data_mask.test_mask = test_mask
 
-num_features = data_selected.x.shape[1]
+num_features_static = data_static.x.shape[1]
+num_features_dynamic = data_dynamic.x.shape[1]
 num_classes = 2
 
 # ----------------------------------------------------------
 # 10. Model initialization
 # ----------------------------------------------------------
-model = GCN(in_channels=num_features, hidden_channels=32, out_channels=num_classes)
+model = GraphFusionNet_1(in1=num_features_static, in2= num_features_dynamic, hidden=32, out=num_classes)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
 
 # ----------------------------------------------------------
 # 11. Train model
 # ----------------------------------------------------------
-train_losses, val_accs = train_loop(model, optimizer, data_selected, epochs=200)
+train_losses, val_accs = train_loop_fusion(model, optimizer, data_static, data_dynamic, data_mask, epochs=200)
 plot_train_val_curves(train_losses, val_accs)
 
 # ----------------------------------------------------------
 # 12. Evaluate model
 # ----------------------------------------------------------
-train_acc, val_acc, test_acc = evaluate(model, data_selected)
+train_acc, val_acc, test_acc = evaluate_fusion(model,  data_static, data_dynamic, data_mask)
 print(f"Final Results:\nTrain Acc: {train_acc:.3f} | Val Acc: {val_acc:.3f} | Test Acc: {test_acc:.3f}")
 
 # ----------------------------------------------------------
@@ -140,7 +143,7 @@ print(f"Final Results:\nTrain Acc: {train_acc:.3f} | Val Acc: {val_acc:.3f} | Te
 # ----------------------------------------------------------
 model.eval()
 with torch.no_grad():
-    embeddings = model(data_selected.x, data_selected.edge_index, return_embedding=True)
+    embeddings = model(data_static.x, data_dynamic.x, data_dynamic.edge_index, return_embedding=True)
 
 print(f"Node Embeddings shape: {embeddings.shape}")
 
@@ -152,9 +155,10 @@ import seaborn as sns
 
 tsne = TSNE(n_components=2, random_state=42)
 emb_2d = tsne.fit_transform(embeddings.cpu())
+emb_2d.to_csv(f"{output_folder}/tsne_output_.csv", index=False)
 
 df_emb = pd.DataFrame(emb_2d, columns=['x', 'y'])
-df_emb['label'] = data_selected.y.cpu().numpy()
+df_emb['label'] = data_dynamic.y.cpu().numpy()
 
 plt.figure(figsize=(6,5))
 sns.scatterplot(data=df_emb, x='x', y='y', hue='label', palette='Set1', alpha=0.8)

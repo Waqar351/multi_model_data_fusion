@@ -26,4 +26,39 @@ class GCN(torch.nn.Module):
         x_out = self.conv2(x, edge_index)
 
         return x_emb if return_embedding else x_out
+    
+import torch
+import torch.nn.functional as F
+from torch_geometric.nn import GCNConv
+
+class GraphFusionNet_1(torch.nn.Module):
+    def __init__(self, in1, in2, hidden, out):
+        super().__init__()
+        # Two GCNs (one for each graph)
+        self.gcn1_1 = SAGEConv(in1, hidden)
+        self.gcn1_2 = SAGEConv(in2, hidden)
+
+        # Fusion weights (learnable)
+        self.alpha = torch.nn.Parameter(torch.tensor(0.5))
+
+        # Second fusion layer
+        self.gcn2_1 = SAGEConv(hidden, out)
+        self.gcn2_2 = SAGEConv(hidden, out)
+
+    def forward(self, x1, x2, edge_index, return_embedding = False):
+        # First-level message passing
+        h1 = F.relu(self.gcn1_1(x1, edge_index))
+        h2 = F.relu(self.gcn1_2(x2, edge_index))
+
+        # Fusion (weighted sum)
+        h = self.alpha * h1 + (1 - self.alpha) * h2
+
+        # Second-level message passing
+        h1 = self.gcn2_1(h, edge_index)
+        h2 = self.gcn2_2(h, edge_index)
+
+        # Final fusion
+        out = self.alpha * h1 + (1 - self.alpha) * h2
+        return h if return_embedding else out
+
 

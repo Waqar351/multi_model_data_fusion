@@ -41,3 +41,40 @@ def train_loop(model, optimizer, data, epochs=200):
                   f"Train: {train_acc:.3f} | Val: {val_acc:.3f} | Test: {test_acc:.3f}")
 
     return train_losses, val_accs
+
+
+def train_epoch_fusion(model, optimizer, data_static, data_dynamic, data_mask):
+    model.train()
+    optimizer.zero_grad()
+    out = model(data_static.x, data_dynamic.x, data_dynamic.edge_index)
+    loss = F.cross_entropy(out[data_mask.train_mask], data_dynamic.y[data_mask.train_mask])
+    loss.backward()
+    optimizer.step()
+    return loss.item()
+
+@torch.no_grad()
+def evaluate_fusion(model, data_static, data_dynamic, data_mask):
+    model.eval()
+    out = model(data_static.x, data_dynamic.x, data_dynamic.edge_index)
+    pred = out.argmax(dim=1)
+    accs = []
+    for mask in [data_mask.train_mask, data_mask.val_mask, data_mask.test_mask]:
+        correct = (pred[mask] == data_dynamic.y[mask]).sum()
+        acc = int(correct) / int(mask.sum())
+        accs.append(acc)
+    return accs  # train_acc, val_acc, test_acc
+
+def train_loop_fusion(model, optimizer, data_static, data_dynamic, data_mask, epochs=200):
+    train_losses, val_accs = [], []
+
+    for epoch in range(1, epochs + 1):
+        loss = train_epoch_fusion(model, optimizer, data_static, data_dynamic, data_mask)
+        train_acc, val_acc, test_acc = evaluate_fusion(model, data_static, data_dynamic, data_mask)
+        train_losses.append(loss)
+        val_accs.append(val_acc)
+
+        if epoch % 20 == 0:
+            print(f"Epoch {epoch:03d} | Loss: {loss:.4f} | "
+                  f"Train: {train_acc:.3f} | Val: {val_acc:.3f} | Test: {test_acc:.3f}")
+
+    return train_losses, val_accs
