@@ -141,3 +141,56 @@ def prepare_data(mode, data_static, data_dynamic):
         return data_combined
     else:
         raise ValueError(f"Unknown data mode: {mode}")
+    
+from sklearn.model_selection import train_test_split
+import numpy as np
+import torch
+
+def stratified_graph_split(labels, train_ratio=0.6, val_ratio=0.2, random_state=42):
+    """
+    Create stratified boolean masks (train/val/test) for graph data.
+    Works for both binary and multi-class labels.
+    
+    Args:
+        labels (array-like): Node labels (numpy or torch tensor)
+        train_ratio (float): Portion of training samples (default=0.6)
+        val_ratio (float): Portion of validation samples (default=0.2)
+        random_state (int): Random seed
+        
+    Returns:
+        train_mask, val_mask, test_mask (torch.BoolTensor)
+    """
+    if isinstance(labels, torch.Tensor):
+        labels = labels.cpu().numpy()
+    
+    num_nodes = len(labels)
+    indices = np.arange(num_nodes)
+    
+    # --- Train vs Temp split (Temp = Val + Test)
+    train_indices, temp_indices, y_train, y_temp = train_test_split(
+        indices,
+        labels,
+        stratify=labels,
+        test_size=(1 - train_ratio),
+        random_state=random_state
+    )
+    
+    # --- Validation vs Test split (stratified within Temp)
+    val_size = val_ratio / (1 - train_ratio)
+    val_indices, test_indices = train_test_split(
+        temp_indices,
+        stratify=y_temp,
+        test_size=(1 - val_size),
+        random_state=random_state
+    )
+    
+    # --- Boolean masks
+    train_mask = torch.zeros(num_nodes, dtype=torch.bool)
+    val_mask = torch.zeros(num_nodes, dtype=torch.bool)
+    test_mask = torch.zeros(num_nodes, dtype=torch.bool)
+
+    train_mask[train_indices] = True
+    val_mask[val_indices] = True
+    test_mask[test_indices] = True
+    
+    return train_mask, val_mask, test_mask

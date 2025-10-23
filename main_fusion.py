@@ -155,7 +155,9 @@ import seaborn as sns
 
 tsne = TSNE(n_components=2, random_state=42)
 emb_2d = tsne.fit_transform(embeddings.cpu())
-emb_2d.to_csv(f"{output_folder}/tsne_output_.csv", index=False)
+
+tsne_result = pd.DataFrame(emb_2d)
+tsne_result.to_csv(f"{output_folder}/tsne_output.csv", index=False)
 
 df_emb = pd.DataFrame(emb_2d, columns=['x', 'y'])
 df_emb['label'] = data_dynamic.y.cpu().numpy()

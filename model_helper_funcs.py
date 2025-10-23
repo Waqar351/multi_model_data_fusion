@@ -1,6 +1,7 @@
 import torch.nn.functional as F
 import torch
-
+from torch.utils.tensorboard import SummaryWriter
+import os
 # ==========================================================
 #  Training and Evaluation Utilities
 # ==========================================================
@@ -64,17 +65,30 @@ def evaluate_fusion(model, data_static, data_dynamic, data_mask):
         accs.append(acc)
     return accs  # train_acc, val_acc, test_acc
 
-def train_loop_fusion(model, optimizer, data_static, data_dynamic, data_mask, epochs=200):
-    train_losses, val_accs = [], []
+def train_loop_fusion(model, optimizer, data_static, data_dynamic, data_mask, epochs=200, method_model = "graph_fusion_experiment"):
+    train_losses, val_accs, test_accs, alpha_values = [], [], [], []
+
+    log_dir = os.path.join("runs", f"{method_model}")
+    writer = SummaryWriter(log_dir=log_dir)
 
     for epoch in range(1, epochs + 1):
         loss = train_epoch_fusion(model, optimizer, data_static, data_dynamic, data_mask)
         train_acc, val_acc, test_acc = evaluate_fusion(model, data_static, data_dynamic, data_mask)
         train_losses.append(loss)
         val_accs.append(val_acc)
+        test_accs.append(test_acc)
+        alpha = model.alpha.item()
+        alpha_values.append(alpha)
+
+        # --- Log all key metrics to TensorBoard ---
+        writer.add_scalar("Loss/train", loss, epoch)
+        writer.add_scalar("Accuracy/train", train_acc, epoch)
+        writer.add_scalar("Accuracy/val", val_acc, epoch)
+        writer.add_scalar("Accuracy/test", test_acc, epoch)
+        writer.add_scalar("Fusion/alpha", alpha, epoch)
 
         if epoch % 20 == 0:
             print(f"Epoch {epoch:03d} | Loss: {loss:.4f} | "
-                  f"Train: {train_acc:.3f} | Val: {val_acc:.3f} | Test: {test_acc:.3f}")
-
-    return train_losses, val_accs
+                  f"Train: {train_acc:.3f} | Val: {val_acc:.3f} | Test: {test_acc:.3f} | Alpha: {alpha:.3f}")
+    writer.close()
+    return train_losses, val_accs, test_accs, alpha_values
