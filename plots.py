@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import os
 import pandas as pd
 import seaborn as sns
+import numpy as np
 
 save_format = 'png'
 dpi = 300
@@ -73,6 +74,84 @@ def plot_embedding(emb_2d, crime_label_tensor, filename= 'embedding', output_pat
 
     plt.figure(figsize=figsize)
     sns.scatterplot(data=df_emb, x='x', y='y', hue='label', palette='Set1')
+    # Save or show
+    if output_path:
+        file_path = os.path.join(output_path, f"{filename}.{save_format}")
+        plt.savefig(file_path, dpi=dpi, bbox_inches="tight")
+        plt.show()
+        plt.close()
+    else:
+        plt.show()
+        plt.close()
+
+def plot_features_contribution(alpha_values, filename="plot_feature_contribution", output_path = None):
+    epochs = np.arange(1, len(alpha_values) + 1)
+    alpha = np.array(alpha_values)
+    static_contrib = alpha
+    dynamic_contrib = 1 - alpha
+
+    plt.figure(figsize=(8, 5))
+    plt.plot(epochs, static_contrib, label='Static Contribution (α)', linewidth=2)
+    plt.plot(epochs, dynamic_contrib, label='Dynamic Contribution (1−α)', linewidth=2, linestyle='--')
+
+    # Highlight key thresholds
+    plt.axhline(0, color='gray', linestyle=':', linewidth=1)
+    plt.axhline(0.5, color='lightgray', linestyle='--', linewidth=1)
+    plt.axhline(1, color='gray', linestyle=':', linewidth=1)
+
+    plt.title("Evolution of Fusion Weights (α) Over Training")
+    plt.xlabel("Epoch")
+    plt.ylabel("Contribution Weight")
+    plt.legend()
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    # Save or show
+    if output_path:
+        file_path = os.path.join(output_path, f"{filename}.{save_format}")
+        plt.savefig(file_path, dpi=dpi, bbox_inches="tight")
+        plt.show()
+        plt.close()
+    else:
+        plt.show()
+        plt.close()
+    
+def plot_feature_contr_validation_scr(alpha_values, val_accs, filename = "feature_contrib_val_scr", output_path = None):
+
+    epochs = np.arange(1, len(alpha_values) + 1)
+    alpha = np.array(alpha_values)
+    static_contrib = alpha
+    dynamic_contrib = 1 - alpha
+    val_acc = np.array(val_accs)
+
+    # --- Create figure ---
+    fig, ax1 = plt.subplots(figsize=(9, 5))
+
+    # Plot α (static) and (1-α) (dynamic) on the left y-axis
+    ax1.plot(epochs, static_contrib, label='Static Contribution (α)', color='tab:blue', linewidth=2)
+    ax1.plot(epochs, dynamic_contrib, label='Dynamic Contribution (1−α)', color='tab:orange', linewidth=2, linestyle='--')
+    ax1.set_xlabel('Epoch')
+    ax1.set_ylabel('Fusion Coefficient', color='tab:blue')
+    ax1.tick_params(axis='y', labelcolor='tab:blue')
+    ax1.grid(alpha=0.3)
+
+    # Highlight baseline levels
+    ax1.axhline(0.5, color='lightgray', linestyle='--', linewidth=1)
+    ax1.axhline(0, color='gray', linestyle=':', linewidth=1)
+
+    # --- Add validation accuracy on secondary y-axis ---
+    ax2 = ax1.twinx()
+    ax2.plot(epochs, val_acc, label='Validation Accuracy', color='tab:green', linewidth=2.5)
+    ax2.set_ylabel('Validation Accuracy', color='tab:green')
+    ax2.tick_params(axis='y', labelcolor='tab:green')
+
+    # --- Combine legends from both axes ---
+    lines_1, labels_1 = ax1.get_legend_handles_labels()
+    lines_2, labels_2 = ax2.get_legend_handles_labels()
+    ax1.legend(lines_1 + lines_2, labels_1 + labels_2, loc='lower right')
+
+    plt.title("Fusion Behavior vs Model Performance")
+    plt.tight_layout()
+    
     # Save or show
     if output_path:
         file_path = os.path.join(output_path, f"{filename}.{save_format}")
