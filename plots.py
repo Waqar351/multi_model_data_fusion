@@ -85,10 +85,37 @@ def plot_embedding(emb_2d, crime_label_tensor, filename= 'embedding', output_pat
         plt.close()
 
 def plot_features_contribution(alpha_values, filename="plot_feature_contribution", output_path = None):
+    """
+    Plots the evolution of static and dynamic feature contributions (α values) over training epochs.
+
+    Parameters
+    ----------
+    alpha_values : list
+        Either a list of scalar α values (floats) or a list of dictionaries with keys 
+        'static_dataset' and 'dynamic_dataset' per epoch.
+    filename : str, optional
+        Output filename (without extension).
+    output_path : str, optional
+        Directory to save the plot. If None, the plot is just displayed.
+    save_format : str, optional
+        File format to save the plot (default: 'png').
+    dpi : int, optional
+        Resolution of the saved figure (default: 300).
+    """
+    # epochs = np.arange(1, len(alpha_values) + 1)
+    # alpha = np.array(alpha_values)
+    # static_contrib = alpha
+    # dynamic_contrib = 1 - alpha
+
+    # --- Parse alpha values dynamically ---
+    if isinstance(alpha_values[0], dict):
+        static_contrib = [d.get("static_dataset", 0) for d in alpha_values]
+        dynamic_contrib = [d.get("dynamic_dataset", 0) for d in alpha_values]
+    else:
+        static_contrib = np.array(alpha_values)
+        dynamic_contrib = 1 - static_contrib
+    
     epochs = np.arange(1, len(alpha_values) + 1)
-    alpha = np.array(alpha_values)
-    static_contrib = alpha
-    dynamic_contrib = 1 - alpha
 
     plt.figure(figsize=(8, 5))
     plt.plot(epochs, static_contrib, label='Static Contribution (α)', linewidth=2)
@@ -117,11 +144,20 @@ def plot_features_contribution(alpha_values, filename="plot_feature_contribution
     
 def plot_feature_contr_validation_scr(alpha_values, val_accs, filename = "feature_contrib_val_scr", output_path = None):
 
-    epochs = np.arange(1, len(alpha_values) + 1)
-    alpha = np.array(alpha_values)
-    static_contrib = alpha
-    dynamic_contrib = 1 - alpha
+    # epochs = np.arange(1, len(alpha_values) + 1)
+    # alpha = np.array(alpha_values)
+    # static_contrib = alpha
+    # dynamic_contrib = 1 - alpha
     val_acc = np.array(val_accs)
+    # --- Parse alpha values dynamically ---
+    if isinstance(alpha_values[0], dict):
+        static_contrib = [d.get("static_dataset", 0) for d in alpha_values]
+        dynamic_contrib = [d.get("dynamic_dataset", 0) for d in alpha_values]
+    else:
+        static_contrib = np.array(alpha_values)
+        dynamic_contrib = 1 - static_contrib
+    
+    epochs = np.arange(1, len(alpha_values) + 1)
 
     # --- Create figure ---
     fig, ax1 = plt.subplots(figsize=(9, 5))
