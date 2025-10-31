@@ -7,6 +7,23 @@ from torch_geometric.nn import SAGEConv, GraphConv, SuperGATConv, GATConv, GCNCo
 from torch import nn
 
 class EdgeFeatureAttentionGCN(nn.Module):
+    """
+    A Graph Convolutional Network (GCN) layer with learnable, edge-specific feature-wise attention.
+
+    This layer extends standard GCNs by dynamically computing an attention vector for each edge,
+    allowing the model to weigh neighbor contributions differently across feature dimensions.
+    The attention coefficients are produced by an MLP that takes concatenated transformed features
+    of source and target nodes as input, enabling adaptive and edge-dependent message passing.
+
+    Args:
+        in_channels (int): Number of input features per node.
+        out_channels (int): Number of output features per node.
+        hidden_att (int): Hidden dimension for the attention MLP.
+        use_bias (bool): Whether to include a learnable bias term.
+
+    Returns:
+        Tensor: Node embeddings of shape [num_nodes, out_channels].
+    """
     def __init__(self, in_channels, out_channels, hidden_att=16, use_bias=True):
         super().__init__()
         self.in_channels = in_channels
@@ -122,6 +139,44 @@ class FastGraphConv(nn.Module):
         return out
 
 class FeatureWiseGraphConv(nn.Module):
+    """
+    A feature-wise Graph Convolution layer that applies a learnable, 
+    feature-dependent attention weighting during message passing.
+
+    This layer performs graph convolution by linearly transforming node features 
+    and aggregating information from neighboring nodes, with each output feature 
+    dimension having its own learnable attention coefficient (`alpha`). 
+    The operation follows a normalized message-passing scheme with self-loops.
+
+    Parameters
+    ----------
+    in_channels : int
+        Dimensionality of input node features.
+    out_channels : int
+        Dimensionality of output node features.
+    use_bias : bool, optional (default=True)
+        If True, adds a learnable bias term to the output.
+
+    Inputs
+    ------
+    x : torch.Tensor, shape [num_nodes, in_channels]
+        Node feature matrix.
+    edge_index : torch.LongTensor, shape [2, num_edges]
+        Graph connectivity in COO format, where each column represents an edge (source, target).
+
+    Returns
+    -------
+    out : torch.Tensor, shape [num_nodes, out_channels]
+        Updated node feature representations after message passing.
+
+    Notes
+    -----
+    - Adds self-loops to the graph to include each node's own features during aggregation.
+    - Uses symmetric normalization (similar to GCN): 
+      `norm_ij = (deg_i * deg_j)^(-1/2)` for each edge (i, j).
+    - The learnable vector `alpha` scales each output feature dimension independently, 
+      introducing a form of **feature-wise attention**.
+    """
     def __init__(self, in_channels, out_channels, use_bias=True):
         super(FeatureWiseGraphConv, self).__init__()
         self.in_channels = in_channels
