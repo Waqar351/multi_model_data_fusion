@@ -17,7 +17,7 @@ import io
 import time
 
 
-df = pd.read_csv("visualization/data/tsne.csv")
+df = pd.read_csv("visualization/data/tsne2.csv")
 
 input_features = pd.read_csv("visualization/data/data_subset.csv")
 
