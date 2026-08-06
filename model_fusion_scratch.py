@@ -478,6 +478,284 @@ class StaticDynamicGNN_adv(MessagePassing):
         msg = self.lin_stat_neigh(x_static_j) + self.lin_dyn_neigh(x_dynamic_j)
         return msg
 
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch_geometric.nn import MessagePassing
+from torch_geometric.nn import SAGEConv, GraphConv
+
+
+class StaticDynamicGNN_adv_2(MessagePassing):
+    """
+    StaticDynamicGNN_adv
+    --------------------
+    A Graph Neural Network layer that jointly processes static and dynamic node features.
+    It integrates feature contributions from self and neighboring nodes using separate
+    learnable transformations for static and dynamic modalities, followed by a shared
+    hidden representation and output projection.
+
+    Attributes
+    ----------
+    in_static : int
+        Dimensionality of static node features.
+    in_dynamic : int
+        Dimensionality of dynamic node features.
+    hidden_dim : int
+        Dimensionality of the intermediate hidden representation.
+    out_channels : int
+        Number of output channels (task-dependent).
+    """
+
+    def __init__(self, in_static, in_dynamic, hidden_dim, out_channels, dropout=0.2):
+        super().__init__(aggr='add')  # aggregate messages by summation
+
+        # --- Linear transformations ---
+        self.lin_stat_self = nn.Linear(in_static, hidden_dim)
+        self.lin_dyn_self = nn.Linear(in_dynamic, hidden_dim)
+        self.lin_stat_neigh = nn.Linear(in_static, hidden_dim)
+        self.lin_dyn_neigh = nn.Linear(in_dynamic, hidden_dim)
+
+        # --- Output projection ---
+        self.lin_out = nn.Linear(hidden_dim, out_channels)
+
+        # --- Normalization and regularization ---
+        self.batch_norm = nn.BatchNorm1d(hidden_dim)
+        self.dropout = dropout
+
+        # --- Activation ---
+        self.act = nn.LeakyReLU(negative_slope=0.1)
+
+        # --- Initialize parameters ---
+        self.reset_parameters()
+
+    # ---------------- Initialization ---------------- #
+    def reset_parameters(self):
+        """Initialize all parameters using Xavier uniform initialization."""
+        for m in self.modules():
+            if isinstance(m, nn.Linear):
+                nn.init.xavier_uniform_(m.weight)
+                if m.bias is not None:
+                    nn.init.zeros_(m.bias)
+
+    # ---------------- Message Passing ---------------- #
+    def message(self, x_static_j, x_dynamic_j):
+        """
+        Compute messages for neighboring nodes j.
+        """
+        msg = self.lin_stat_neigh(x_static_j) + self.lin_dyn_neigh(x_dynamic_j)
+        return msg
+
+    # ---------------- Forward Pass ---------------- #
+    def forward(self, x_static, x_dynamic, edge_index, return_embedding=False):
+        """
+        Forward pass through the layer.
+
+        Parameters
+        ----------
+        x_static : torch.Tensor
+            Static node features of shape [N, in_static].
+        x_dynamic : torch.Tensor
+            Dynamic node features of shape [N, in_dynamic].
+        edge_index : torch.LongTensor
+            Graph connectivity in COO format [2, E].
+        return_embedding : bool, optional
+            Whether to return hidden embeddings instead of the final output.
+
+        Returns
+        -------
+        torch.Tensor or (torch.Tensor, dict)
+            Output tensor or (output tensor, contribution dictionary).
+        """
+
+        # --- Compute self and neighbor embeddings ---
+        hidden_self = self.lin_stat_self(x_static) + self.lin_dyn_self(x_dynamic)
+        hidden_neigh = self.propagate(edge_index, x_static=x_static, x_dynamic=x_dynamic)
+
+        # --- Combine, normalize, activate ---
+        hidden = self.act(hidden_self + hidden_neigh)
+        hidden = self.batch_norm(hidden)
+        hidden = F.dropout(hidden, p=self.dropout, training=self.training)
+
+        # --- Compute output ---
+        out = self.lin_out(hidden)
+
+        # --- Compute modality contributions ---
+        contrib_dict = self._compute_contributions(x_static, x_dynamic)
+
+        if return_embedding:
+            return hidden, contrib_dict
+        else:
+            return out, contrib_dict
+
+    # ---------------- Contribution Tracking ---------------- #
+    def _compute_contributions(self, x_static, x_dynamic):
+        """
+        Compute both activation-based and gradient-based contributions
+        for static and dynamic features.
+        """
+
+        # --- Activation-based contribution (feature magnitude) ---
+        act_static = self.lin_stat_self(x_static).abs().mean().item()
+        act_dynamic = self.lin_dyn_self(x_dynamic).abs().mean().item()
+
+        # --- Gradient-based contribution (learning signal) ---
+        grad_static = (
+            self.lin_stat_self.weight.grad.abs().mean().item()
+            if self.lin_stat_self.weight.grad is not None
+            else 0.0
+        )
+        grad_dynamic = (
+            self.lin_dyn_self.weight.grad.abs().mean().item()
+            if self.lin_dyn_self.weight.grad is not None
+            else 0.0
+        )
+
+        # Normalize for comparison (optional)
+        total_grad = grad_static + grad_dynamic + 1e-8
+        grad_static_ratio = grad_static / total_grad
+        grad_dynamic_ratio = grad_dynamic / total_grad
+
+        contrib = {
+            "static_dataset": act_static,
+            "dynamic_dataset": act_dynamic,
+            "grad_static": grad_static,
+            "grad_dynamic": grad_dynamic,
+            "grad_ratio_static": grad_static_ratio,
+            "grad_ratio_dynamic": grad_dynamic_ratio,
+        }
+        return contrib
+    
+class StaticDynamicGNN_adv_3(MessagePassing):
+    """
+    StaticDynamicGNN_adv_3
+    ---------------------
+    A GNN layer that jointly processes static and dynamic node features
+    using explicit MESSAGE → AGGREGATE → UPDATE steps.
+    """
+
+    def __init__(self, in_static, in_dynamic, hidden_dim, out_channels, dropout=0.2):
+        super().__init__(aggr='add')
+
+        # ---- Self feature transformations ----
+        self.lin_stat_self = nn.Linear(in_static, hidden_dim)
+        self.lin_dyn_self = nn.Linear(in_dynamic, hidden_dim)
+
+        # ---- Neighbor feature transformations ----
+        self.lin_stat_neigh = nn.Linear(in_static, hidden_dim)
+        self.lin_dyn_neigh = nn.Linear(in_dynamic, hidden_dim)
+
+        # ----- learnable update -------------------
+        self.update_mlp = nn.Sequential(nn.Linear(2 * hidden_dim, hidden_dim),
+                                        nn.LeakyReLU(0.1),
+                                        nn.BatchNorm1d(hidden_dim))
+        
+        # ----- Seocnd GNN layer ------------------------
+        self.sage = GraphConv(hidden_dim, hidden_dim)
+
+        # ---- Output projection ----
+        self.lin_out = nn.Linear(hidden_dim, out_channels)
+
+
+        # ---- Regularization ----
+        self.batch_norm = nn.BatchNorm1d(hidden_dim)
+        self.dropout = dropout
+
+        # ---- Activation ----
+        self.act = nn.LeakyReLU(negative_slope=0.1)
+
+        self.reset_parameters()
+
+    # ---------------- Initialization ---------------- #
+    def reset_parameters(self):
+        for m in self.modules():
+            if isinstance(m, nn.Linear):
+                nn.init.xavier_uniform_(m.weight)
+                nn.init.zeros_(m.bias)
+
+    # ---------------- Message ---------------- #
+    def message(self, x_static_j, x_dynamic_j):
+        """
+        Compute messages from neighboring nodes j → i.
+        """
+        msg = (
+            self.lin_stat_neigh(x_static_j) +
+            self.lin_dyn_neigh(x_dynamic_j)
+        )
+        return msg
+
+    # ---------------- Update ---------------- #
+    def update(self, aggr_out, x_static, x_dynamic):
+        """
+        Combine self-node features with aggregated neighbor messages.
+        """
+
+        # Self contribution
+        self_emb = (
+            self.lin_stat_self(x_static) +
+            self.lin_dyn_self(x_dynamic)
+        )
+
+        ## Fuse self + neighbors
+        # hidden = self_emb + aggr_out
+
+        ## Concatenate instead of summation
+        fused = torch.cat([self_emb, aggr_out], dim=-1)
+        hidden = self.update_mlp(fused)
+
+        # Normalize + activate + regularize
+        # hidden = self.act(hidden)
+        # hidden = self.batch_norm(hidden)
+        hidden = F.dropout(hidden, p=self.dropout, training=self.training)
+
+        return hidden
+
+    # ---------------- Forward ---------------- #
+    def forward(self, x_static, x_dynamic, edge_index, return_embedding=False):
+
+        # Message passing (calls message → aggregate → update)
+        hidden = self.propagate(
+            edge_index,
+            x_static=x_static,
+            x_dynamic=x_dynamic
+        )
+
+        ## ---------- Second GNN layer----------------------
+        hidden = self.sage(hidden, edge_index)
+
+        ## ---------- Output layer---------------------------
+        out = self.lin_out(hidden)
+
+        contrib_dict = self._compute_contributions(x_static, x_dynamic)
+
+        if return_embedding:
+            return hidden, contrib_dict
+        return out, contrib_dict
+
+    # ---------------- Contribution Tracking ---------------- #
+    def _compute_contributions(self, x_static, x_dynamic):
+
+        act_static = self.lin_stat_self(x_static).abs().mean().item()
+        act_dynamic = self.lin_dyn_self(x_dynamic).abs().mean().item()
+
+        grad_static = (
+            self.lin_stat_self.weight.grad.abs().mean().item()
+            if self.lin_stat_self.weight.grad is not None else 0.0
+        )
+        grad_dynamic = (
+            self.lin_dyn_self.weight.grad.abs().mean().item()
+            if self.lin_dyn_self.weight.grad is not None else 0.0
+        )
+
+        total_grad = grad_static + grad_dynamic + 1e-8
+
+        return {
+            "static_dataset": act_static,
+            "dynamic_dataset": act_dynamic,
+            "grad_static": grad_static,
+            "grad_dynamic": grad_dynamic,
+            "grad_ratio_static": grad_static / total_grad,
+            "grad_ratio_dynamic": grad_dynamic / total_grad,
+        }
 
 import torch
 import torch.nn as nn
