@@ -42,8 +42,11 @@ Thumbs.db
 # PDF and other uploaded documents (user content)
 datasets/
 results/
+results_old/
+*.presentation_deps
 runs/
 *.pdf
+*.pptx
 *.txt
 *.csv
 
