@@ -43,7 +43,9 @@ Thumbs.db
 datasets/
 results/
 results_old/
+results_new/
 *.presentation_deps
+*.validation_deps
 runs/
 *.pdf
 *.pptx
