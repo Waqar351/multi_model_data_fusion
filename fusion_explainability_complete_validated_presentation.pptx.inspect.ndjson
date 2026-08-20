@@ -1,0 +1,722 @@
+{"kind":"deck","id":"pr/1l4ro8","name":"Deck"}
+{"kind":"layout","layoutId":"cf5e3dba-c8e9-4c23-b859-ae524248e1f5","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"3884fb05-734e-4ff3-8abf-43d96ea02952","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/hrehzz","slide":1,"title":"CHECKPOINT-VALIDATED MODEL COMPARISON","textShapes":9}
+{"kind":"textbox","id":"sh/ni94baxs","slide":1,"text":"CHECKPOINT-VALIDATED MODEL COMPARISON","textPreview":"CHECKPOINT-VALIDATED MODEL COMPARISON","textChars":37,"textLines":1,"bbox":[64,42,700,24]}
+{"kind":"textbox","id":"sh/ojil4fyd","slide":1,"text":"Six fusion architectures,\none reproducible\nevidence chain","textPreview":"Six fusion architectures, | one reproducible | evidence chain","textChars":57,"textLines":3,"bbox":[64,150,760,250]}
+{"kind":"shape","id":"sh/pkbmdkfy","slide":1,"bbox":[925,88,245,475]}
+{"kind":"textbox","id":"sh/ed03ylgb","slide":1,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[954,120,190,120]}
+{"kind":"textbox","id":"sh/fe947qxw","slide":1,"text":"architectures","textPreview":"architectures","textChars":13,"textLines":1,"bbox":[954,230,190,42]}
+{"kind":"textbox","id":"sh/0fil0vyh","slide":1,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[954,335,190,110]}
+{"kind":"textbox","id":"sh/1grm90fm","slide":1,"text":"validated slides","textPreview":"validated slides","textChars":16,"textLines":1,"bbox":[954,435,190,42]}
+{"kind":"textbox","id":"sh/qpg3ulgz","slide":1,"text":"Static, dynamic, gated and graph fusion for crime forecasting","textPreview":"Static, dynamic, gated and graph fusion for crime forecasting","textChars":61,"textLines":1,"bbox":[64,530,760,60]}
+{"kind":"textbox","id":"sh/rqp43qxk","slide":1,"text":"All figures regenerated from saved best-validation checkpoints","textPreview":"All figures regenerated from saved best-validation checkpoints","textChars":62,"textLines":1,"bbox":[64,644,850,24]}
+{"kind":"textbox","id":"sh/jmt0ra58","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"notes","id":"nt/hrehzz","slide":1,"text":"Open with the research question: which fusion mechanisms predict best, and what evidence supports how they use each modality?\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/6ae0l9","slide":2,"title":"RESEARCH DESIGN","textShapes":16}
+{"kind":"textbox","id":"sh/fql4rato","slide":2,"text":"RESEARCH DESIGN","textPreview":"RESEARCH DESIGN","textChars":15,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/gre50fa9","slide":2,"text":"Interpretation starts with a strict comparability contract","textPreview":"Interpretation starts with a strict comparability contract","textChars":58,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/1snmtkbu","slide":2,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/6lc3uls7","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"textbox","id":"sh/rml4nqts","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[84,170,18,34]}
+{"kind":"textbox","id":"sh/snu5wvax","slide":2,"text":"Chronological transductive test protocol across all six models","textPreview":"Chronological transductive test protocol across all six models","textChars":62,"textLines":1,"bbox":[112,170,672,45]}
+{"kind":"textbox","id":"sh/to3mp0bi","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[84,240,18,34]}
+{"kind":"textbox","id":"sh/ixs3qlcv","slide":2,"text":"Best-validation checkpoints reloaded; training skipped","textPreview":"Best-validation checkpoints reloaded; training skipped","textChars":54,"textLines":1,"bbox":[112,240,672,45]}
+{"kind":"textbox","id":"sh/ji14jqtg","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[84,310,18,34]}
+{"kind":"textbox","id":"sh/3ytgrqpg","slide":2,"text":"Raw gates, effective activation and branch occlusion are not synonyms","textPreview":"Raw gates, effective activation and branch occlusion are not synonyms","textChars":69,"textLines":1,"bbox":[112,310,672,45]}
+{"kind":"textbox","id":"sh/ixkzylov","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[84,380,18,34]}
+{"kind":"textbox","id":"sh/50byt076","slide":2,"text":"Frozen interventions test reliance but are not retrained baselines","textPreview":"Frozen interventions test reliance but are not retrained baselines","textChars":66,"textLines":1,"bbox":[112,380,672,45]}
+{"kind":"textbox","id":"sh/4z2h0v61","slide":2,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[84,450,18,34]}
+{"kind":"textbox","id":"sh/rmtgvqpc","slide":2,"text":"Time-cluster bootstrap addresses temporal dependence","textPreview":"Time-cluster bootstrap addresses temporal dependence","textChars":52,"textLines":1,"bbox":[112,450,672,45]}
+{"kind":"shape","id":"sh/q1kz25or","slide":2,"bbox":[830,170,320,350]}
+{"kind":"textbox","id":"sh/dovyx07i","slide":2,"text":"TRACEABLE EVIDENCE","textPreview":"TRACEABLE EVIDENCE","textChars":18,"textLines":1,"bbox":[855,195,270,28]}
+{"kind":"textbox","id":"sh/cnmh4v6x","slide":2,"text":"Notebook\n→ checkpoint\n→ metric\n→ figure\n→ slide","textPreview":"Notebook | → checkpoint | → metric | → figure | → slide","textChars":47,"textLines":5,"bbox":[855,245,260,245]}
+{"kind":"textbox","id":"sh/7q9gj6p8","slide":2,"text":"Only results_new figures appear in this deck.","textPreview":"Only results_new figures appear in this deck.","textChars":45,"textLines":1,"bbox":[855,510,260,55]}
+{"kind":"notes","id":"nt/6ae0l9","slide":2,"text":"Explain the evidence chain and the limits of the experimental design.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/s4u9jj","slide":3,"title":"ARCHITECTURE COMPARISON","textShapes":24}
+{"kind":"textbox","id":"sh/xcnex832","slide":3,"text":"ARCHITECTURE COMPARISON","textPreview":"ARCHITECTURE COMPARISON","textChars":23,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/a9cvmdkr","slide":3,"text":"Fusion location—not model name—determines which explanations are valid","textPreview":"Fusion location—not model name—determines which explanations are valid","textChars":70,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/valwvilc","slide":3,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/kfedsn2t","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"textbox","id":"sh/50ne1s3e","slide":3,"text":"MODEL","textPreview":"MODEL","textChars":5,"textLines":1,"bbox":[74,158,180,28]}
+{"kind":"textbox","id":"sh/idwvqdkn","slide":3,"text":"COMPUTATION PATH","textPreview":"COMPUTATION PATH","textChars":16,"textLines":1,"bbox":[270,158,690,28]}
+{"kind":"textbox","id":"sh/je5wzil8","slide":3,"text":"SELECTOR","textPreview":"SELECTOR","textChars":8,"textLines":1,"bbox":[1010,158,190,28]}
+{"kind":"shape","id":"sh/0jadg32p","slide":3,"bbox":[64,195,1152,60]}
+{"kind":"textbox","id":"sh/l43upo3a","slide":3,"text":"M7","textPreview":"M7","textChars":2,"textLines":1,"bbox":[78,195,175,60]}
+{"kind":"textbox","id":"sh/x0jylcrm","slide":3,"text":"Graph each modality → late concatenate","textPreview":"Graph each modality → late concatenate","textChars":38,"textLines":1,"bbox":[270,195,710,60]}
+{"kind":"textbox","id":"sh/czahc7a1","slide":3,"text":"No gate","textPreview":"No gate","textChars":7,"textLines":1,"bbox":[1010,195,190,60]}
+{"kind":"shape","id":"sh/by1gjm9g","slide":3,"bbox":[64,265,1152,60]}
+{"kind":"textbox","id":"sh/axszahsv","slide":3,"text":"M11 Scalar","textPreview":"M11 Scalar","textChars":10,"textLines":1,"bbox":[78,265,175,60]}
+{"kind":"textbox","id":"sh/lo3ypwri","slide":3,"text":"Self/neighbor messages → global scalar mixing","textPreview":"Self/neighbor messages → global scalar mixing","textChars":45,"textLines":1,"bbox":[270,265,710,60]}
+{"kind":"textbox","id":"sh/k3uhgrad","slide":3,"text":"2 global coefficients","textPreview":"2 global coefficients","textChars":21,"textLines":1,"bbox":[1010,265,190,60]}
+{"kind":"shape","id":"sh/z2lgnm9s","slide":3,"bbox":[64,335,1152,60]}
+{"kind":"textbox","id":"sh/y1czehs7","slide":3,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[78,335,175,60]}
+{"kind":"textbox","id":"sh/9snytwru","slide":3,"text":"Self/neighbor messages → feature-wise mixing","textPreview":"Self/neighbor messages → feature-wise mixing","textChars":44,"textLines":1,"bbox":[270,335,710,60]}
+{"kind":"textbox","id":"sh/8ruhkba9","slide":3,"text":"2 vector gates","textPreview":"2 vector gates","textChars":14,"textLines":1,"bbox":[1010,335,190,60]}
+{"kind":"shape","id":"sh/sv21gfyl","slide":3,"bbox":[64,405,1152,60]}
+{"kind":"textbox","id":"sh/twvipkzq","slide":3,"text":"M33","textPreview":"M33","textChars":3,"textLines":1,"bbox":[78,405,175,60]}
+{"kind":"textbox","id":"sh/69kje5gf","slide":3,"text":"Graph branches → fuse → joint graph","textPreview":"Graph branches → fuse → joint graph","textChars":35,"textLines":1,"bbox":[270,405,710,60]}
+{"kind":"textbox","id":"sh/rat0nah0","slide":3,"text":"No gate","textPreview":"No gate","textChars":7,"textLines":1,"bbox":[1010,405,190,60]}
+{"kind":"shape","id":"sh/gzm1kfyh","slide":3,"bbox":[64,475,1152,60]}
+{"kind":"textbox","id":"sh/10v2tkz2","slide":3,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[78,475,175,60]}
+{"kind":"textbox","id":"sh/ex4jipgb","slide":3,"text":"Encode modalities → feature-wise GMU","textPreview":"Encode modalities → feature-wise GMU","textChars":36,"textLines":1,"bbox":[270,475,710,60]}
+{"kind":"textbox","id":"sh/fyd0rahw","slide":3,"text":"1 vector gate","textPreview":"1 vector gate","textChars":13,"textLines":1,"bbox":[1010,475,190,60]}
+{"kind":"shape","id":"sh/w3i18vid","slide":3,"bbox":[64,545,1152,60]}
+{"kind":"textbox","id":"sh/h4rih0zy","slide":3,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[78,545,175,60]}
+{"kind":"textbox","id":"sh/za1c3i5c","slide":3,"text":"Feature-wise GMU → graph propagation","textPreview":"Feature-wise GMU → graph propagation","textChars":36,"textLines":1,"bbox":[270,545,710,60]}
+{"kind":"textbox","id":"sh/y9svad47","slide":3,"text":"1 vector gate","textPreview":"1 vector gate","textChars":13,"textLines":1,"bbox":[1010,545,190,60]}
+{"kind":"notes","id":"nt/s4u9jj","slide":3,"text":"Architecture paths come from the executed notebook model definitions.\n\n[Sources]\n- D:/data_fusion/M7_Late_Fusion_Complete_Explainability.ipynb\n- D:/data_fusion/M11_Gate_Scalar_Complete_Explainability.ipynb\n- D:/data_fusion/M11_Gate_Vector_only_Explainability.ipynb\n- D:/data_fusion/M33_Hierarchical_Fusion_Complete_Explainability.ipynb\n- D:/data_fusion/Original_GMU_Only_Complete_Explainability.ipynb\n- D:/data_fusion/GMU_GNN_Complete_Explainability.ipynb"}
+{"kind":"slide","id":"sl/i2gfw8","slide":4,"title":"ARCHITECTURE 1 / 6","textShapes":10}
+{"kind":"textbox","id":"sh/hwz2hknq","slide":4,"text":"ARCHITECTURE 1 / 6","textPreview":"ARCHITECTURE 1 / 6","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/ut8jmpoz","slide":4,"text":"M7 keeps graph encoders separate until the final prediction","textPreview":"M7 keeps graph encoders separate until the final prediction","textChars":59,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/fuhkfu5k","slide":4,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/sr61kf69","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/tsf2dknu","slide":4,"bbox":[200,217,115,0]}
+{"kind":"shape","id":"sh/6poji5o3","slide":4,"bbox":[200,347,115,0]}
+{"kind":"shape","id":"sh/7qxkba5o","slide":4,"bbox":[465,217,110,0]}
+{"kind":"shape","id":"sh/k361gv6x","slide":4,"bbox":[465,347,110,0]}
+{"kind":"shape","id":"sh/5of2907i","slide":4,"bbox":[725,282,95,0]}
+{"kind":"shape","id":"sh/h4z65sjm","slide":4,"bbox":[50,185,150,64]}
+{"kind":"textbox","id":"sh/g365wni1","slide":4,"text":"Static 11-D","textPreview":"Static 11-D","textChars":11,"textLines":1,"bbox":[58,189,134,56]}
+{"kind":"shape","id":"sh/v2x43i1g","slide":4,"bbox":[50,315,150,64]}
+{"kind":"textbox","id":"sh/u1onud0v","slide":4,"text":"Dynamic 5-lag","textPreview":"Dynamic 5-lag","textChars":13,"textLines":1,"bbox":[58,319,134,56]}
+{"kind":"shape","id":"sh/t0fm18jq","slide":4,"bbox":[315,185,150,64]}
+{"kind":"textbox","id":"sh/8z65s325","slide":4,"text":"Static GraphConv 64","textPreview":"Static GraphConv 64","textChars":19,"textLines":1,"bbox":[323,189,134,56]}
+{"kind":"shape","id":"sh/7yx4zi1k","slide":4,"bbox":[315,315,150,64]}
+{"kind":"textbox","id":"sh/6xonqdkz","slide":4,"text":"Dynamic GraphConv 64","textPreview":"Dynamic GraphConv 64","textChars":20,"textLines":1,"bbox":[323,319,134,56]}
+{"kind":"shape","id":"sh/lwvmx8je","slide":4,"bbox":[575,217,150,130]}
+{"kind":"textbox","id":"sh/kbm5o32t","slide":4,"text":"Concatenate 128-D","textPreview":"Concatenate 128-D","textChars":17,"textLines":1,"bbox":[583,221,134,122]}
+{"kind":"shape","id":"sh/cfq5k3ap","slide":4,"bbox":[820,250,150,64]}
+{"kind":"textbox","id":"sh/xgz6d8ra","slide":4,"text":"Linear output","textPreview":"Linear output","textChars":13,"textLines":1,"bbox":[828,254,134,56]}
+{"kind":"textbox","id":"sh/ad8nitsj","slide":4,"text":"Static and five-lag dynamic inputs use separate graph encoders. The 128-D concatenated representation is projected directly to one prediction. No modality gate exists.","textPreview":"Static and five-lag dynamic inputs use separate graph encoders. The 128-D concatenated representation is projected directly to one predic...","textChars":167,"textLines":1,"bbox":[90,440,1100,105]}
+{"kind":"notes","id":"nt/i2gfw8","slide":4,"text":"Static and five-lag dynamic inputs use separate graph encoders. The 128-D concatenated representation is projected directly to one prediction. No modality gate exists.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/75oacx","slide":5,"title":"ARCHITECTURE 2 / 6","textShapes":9}
+{"kind":"textbox","id":"sh/7m98zy5w","slide":5,"text":"ARCHITECTURE 2 / 6","textPreview":"ARCHITECTURE 2 / 6","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/sni9s36h","slide":5,"text":"M11 Scalar learns two global mixing coefficients","textPreview":"M11 Scalar learns two global mixing coefficients","textChars":48,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/t8bq18n2","slide":5,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/u9krudon","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/fat83i58","slide":5,"bbox":[215,271,120,0]}
+{"kind":"shape","id":"sh/gb29wn6t","slide":5,"bbox":[485,271,120,0]}
+{"kind":"shape","id":"sh/hcbq58ne","slide":5,"bbox":[755,271,120,0]}
+{"kind":"shape","id":"sh/2dkrydoj","slide":5,"bbox":[1025,271,120,0]}
+{"kind":"shape","id":"sh/3ets7i54","slide":5,"bbox":[65,235,150,72]}
+{"kind":"textbox","id":"sh/7e9kjil0","slide":5,"text":"Static + dynamic","textPreview":"Static + dynamic","textChars":16,"textLines":1,"bbox":[73,239,134,64]}
+{"kind":"shape","id":"sh/md0jadkv","slide":5,"bbox":[335,235,150,72]}
+{"kind":"textbox","id":"sh/tgb2ls36","slide":5,"text":"Self / neighbor transforms","textPreview":"Self / neighbor transforms","textChars":26,"textLines":1,"bbox":[343,239,134,64]}
+{"kind":"shape","id":"sh/8f21cn2l","slide":5,"bbox":[605,235,150,72]}
+{"kind":"textbox","id":"sh/za9kfyl4","slide":5,"text":"2 scalar coefficients","textPreview":"2 scalar coefficients","textChars":21,"textLines":1,"bbox":[613,239,134,64]}
+{"kind":"shape","id":"sh/yp0j6tkj","slide":5,"bbox":[875,235,150,72]}
+{"kind":"textbox","id":"sh/lcr2h83a","slide":5,"text":"Update MLP","textPreview":"Update MLP","textChars":10,"textLines":1,"bbox":[883,239,134,64]}
+{"kind":"shape","id":"sh/kbi1832p","slide":5,"bbox":[1145,235,150,72]}
+{"kind":"textbox","id":"sh/36dkr2l8","slide":5,"text":"Prediction","textPreview":"Prediction","textChars":10,"textLines":1,"bbox":[1153,239,134,64]}
+{"kind":"textbox","id":"sh/ilkjixkn","slide":5,"text":"Static and dynamic information are mixed separately for self information and neighbor messages. The two coefficients are global within a trained run, so case-level gate correlations are undefined.","textPreview":"Static and dynamic information are mixed separately for self information and neighbor messages. The two coefficients are global within a ...","textChars":196,"textLines":1,"bbox":[90,410,1100,130]}
+{"kind":"notes","id":"nt/75oacx","slide":5,"text":"Static and dynamic information are mixed separately for self information and neighbor messages. The two coefficients are global within a trained run, so case-level gate correlations are undefined.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/yjrodt","slide":6,"title":"ARCHITECTURE 3 / 6","textShapes":9}
+{"kind":"textbox","id":"sh/i5sbyl0z","slide":6,"text":"ARCHITECTURE 3 / 6","textPreview":"ARCHITECTURE 3 / 6","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/58jatgzq","slide":6,"text":"M11 Vector adapts fusion by role and latent feature","textPreview":"M11 Vector adapts fusion by role and latent feature","textChars":51,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/47at0vi5","slide":6,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/v2hsn6ho","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/u18bu103","slide":6,"bbox":[215,271,120,0]}
+{"kind":"shape","id":"sh/h4japgzu","slide":6,"bbox":[485,271,120,0]}
+{"kind":"shape","id":"sh/w3atwbi9","slide":6,"bbox":[755,271,120,0]}
+{"kind":"shape","id":"sh/fylszahs","slide":6,"bbox":[1025,271,120,0]}
+{"kind":"shape","id":"sh/excb6507","slide":6,"bbox":[65,235,150,72]}
+{"kind":"textbox","id":"sh/47ilkjmd","slide":6,"text":"Static + dynamic","textPreview":"Static + dynamic","textChars":16,"textLines":1,"bbox":[73,239,134,64]}
+{"kind":"shape","id":"sh/58r2to3y","slide":6,"bbox":[335,235,150,72]}
+{"kind":"textbox","id":"sh/i5g3i947","slide":6,"text":"Self vector gate","textPreview":"Self vector gate","textChars":16,"textLines":1,"bbox":[343,239,134,64]}
+{"kind":"shape","id":"sh/36pkrels","slide":6,"bbox":[605,235,150,72]}
+{"kind":"textbox","id":"sh/g3y1gzm1","slide":6,"text":"Neighbor vector gate","textPreview":"Neighbor vector gate","textChars":20,"textLines":1,"bbox":[613,239,134,64]}
+{"kind":"shape","id":"sh/h472p43m","slide":6,"bbox":[875,235,150,72]}
+{"kind":"textbox","id":"sh/u1gje94b","slide":6,"text":"Message update","textPreview":"Message update","textChars":14,"textLines":1,"bbox":[883,239,134,64]}
+{"kind":"shape","id":"sh/v2pknelg","slide":6,"bbox":[1145,235,150,72]}
+{"kind":"textbox","id":"sh/8fe1czm5","slide":6,"text":"Prediction","textPreview":"Prediction","textChars":10,"textLines":1,"bbox":[1153,239,134,64]}
+{"kind":"textbox","id":"sh/t072l43q","slide":6,"text":"Two 64-D vector gates mix modalities for self information and neighbor messages. Gates vary by case and latent feature, enabling specialization, conditional behavior and gate reassignment tests.","textPreview":"Two 64-D vector gates mix modalities for self information and neighbor messages. Gates vary by case and latent feature, enabling speciali...","textChars":194,"textLines":1,"bbox":[90,410,1100,130]}
+{"kind":"notes","id":"nt/yjrodt","slide":6,"text":"Two 64-D vector gates mix modalities for self information and neighbor messages. Gates vary by case and latent feature, enabling specialization, conditional behavior and gate reassignment tests.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/0nfz4x","slide":7,"title":"ARCHITECTURE 4 / 6","textShapes":11}
+{"kind":"textbox","id":"sh/4va9orud","slide":7,"text":"ARCHITECTURE 4 / 6","textPreview":"ARCHITECTURE 4 / 6","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/ju18vmds","slide":7,"text":"M33 adds a joint graph stage after branch fusion","textPreview":"M33 adds a joint graph stage after branch fusion","textChars":48,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/itsrmhc7","slide":7,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/t03a1gvu","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/szu9sbu9","slide":7,"bbox":[200,217,115,0]}
+{"kind":"shape","id":"sh/ry1sz6d4","slide":7,"bbox":[200,347,115,0]}
+{"kind":"shape","id":"sh/6xsrq1cj","slide":7,"bbox":[465,217,110,0]}
+{"kind":"shape","id":"sh/1o3a5gv6","slide":7,"bbox":[465,347,110,0]}
+{"kind":"shape","id":"sh/gnu9wbul","slide":7,"bbox":[725,282,95,0]}
+{"kind":"shape","id":"sh/2107ix0f","slide":7,"bbox":[970,282,85,0]}
+{"kind":"shape","id":"sh/n29obih0","slide":7,"bbox":[50,185,150,64]}
+{"kind":"textbox","id":"sh/o3ipknil","slide":7,"text":"Static 11-D","textPreview":"Static 11-D","textChars":11,"textLines":1,"bbox":[58,189,134,56]}
+{"kind":"shape","id":"sh/p4r6dsz6","slide":7,"bbox":[50,315,150,64]}
+{"kind":"textbox","id":"sh/a507mx0r","slide":7,"text":"Dynamic 5-lag","textPreview":"Dynamic 5-lag","textChars":13,"textLines":1,"bbox":[58,319,134,56]}
+{"kind":"shape","id":"sh/bqt8f2hw","slide":7,"bbox":[315,185,150,64]}
+{"kind":"textbox","id":"sh/cr2po7ih","slide":7,"text":"Static GraphConv 64","textPreview":"Static GraphConv 64","textChars":19,"textLines":1,"bbox":[323,189,134,56]}
+{"kind":"shape","id":"sh/xsbqhcz2","slide":7,"bbox":[315,315,150,64]}
+{"kind":"textbox","id":"sh/69g7ad07","slide":7,"text":"Dynamic GraphConv 64","textPreview":"Dynamic GraphConv 64","textChars":20,"textLines":1,"bbox":[323,319,134,56]}
+{"kind":"shape","id":"sh/rupo3yhs","slide":7,"bbox":[575,217,150,130]}
+{"kind":"textbox","id":"sh/v2lcvat8","slide":7,"text":"Fusion MLP 64-D","textPreview":"Fusion MLP 64-D","textChars":15,"textLines":1,"bbox":[583,221,134,122]}
+{"kind":"shape","id":"sh/a1svm5cn","slide":7,"bbox":[820,250,150,64]}
+{"kind":"textbox","id":"sh/x43uxkbe","slide":7,"text":"Joint GraphConv 64","textPreview":"Joint GraphConv 64","textChars":18,"textLines":1,"bbox":[828,254,134,56]}
+{"kind":"shape","id":"sh/w3udofut","slide":7,"bbox":[1055,250,150,64]}
+{"kind":"textbox","id":"sh/ny1crqtc","slide":7,"text":"Prediction","textPreview":"Prediction","textChars":10,"textLines":1,"bbox":[1063,254,134,56]}
+{"kind":"textbox","id":"sh/mxsvi5cr","slide":7,"text":"Independent 64-D graph encoders are concatenated and fused, then propagated through a second joint graph layer before prediction. Contribution is nonlinear and therefore measured with branch occlusion plus an interaction term.","textPreview":"Independent 64-D graph encoders are concatenated and fused, then propagated through a second joint graph layer before prediction. Contrib...","textChars":226,"textLines":1,"bbox":[90,440,1100,105]}
+{"kind":"notes","id":"nt/0nfz4x","slide":7,"text":"Independent 64-D graph encoders are concatenated and fused, then propagated through a second joint graph layer before prediction. Contribution is nonlinear and therefore measured with branch occlusion plus an interaction term.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/zm2seo","slide":8,"title":"ARCHITECTURE 5 / 6","textShapes":10}
+{"kind":"textbox","id":"sh/4vahkzi9","slide":8,"text":"ARCHITECTURE 5 / 6","textPreview":"ARCHITECTURE 5 / 6","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/ju1gbuho","slide":8,"text":"Original GMU isolates feature-wise fusion without a graph","textPreview":"Original GMU isolates feature-wise fusion without a graph","textChars":57,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/itszip03","slide":8,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/h8jy94zi","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/w7ahgzix","slide":8,"bbox":[200,217,115,0]}
+{"kind":"shape","id":"sh/v61g7uhs","slide":8,"bbox":[200,347,115,0]}
+{"kind":"shape","id":"sh/u5sfep07","slide":8,"bbox":[465,217,110,0]}
+{"kind":"shape","id":"sh/14niloz2","slide":8,"bbox":[465,347,110,0]}
+{"kind":"shape","id":"sh/g3ehsjih","slide":8,"bbox":[725,282,95,0]}
+{"kind":"shape","id":"sh/2hojy5wf","slide":8,"bbox":[50,185,150,64]}
+{"kind":"textbox","id":"sh/nix07ax0","slide":8,"text":"Static 11-D","textPreview":"Static 11-D","textChars":11,"textLines":1,"bbox":[58,189,134,56]}
+{"kind":"shape","id":"sh/oj610fel","slide":8,"bbox":[50,315,150,64]}
+{"kind":"textbox","id":"sh/pkzi9kf6","slide":8,"text":"Dynamic 5-lag","textPreview":"Dynamic 5-lag","textChars":13,"textLines":1,"bbox":[58,319,134,56]}
+{"kind":"shape","id":"sh/edojulwj","slide":8,"bbox":[315,185,150,64]}
+{"kind":"textbox","id":"sh/fex03qx4","slide":8,"text":"Static encoder 64","textPreview":"Static encoder 64","textChars":17,"textLines":1,"bbox":[323,189,134,56]}
+{"kind":"shape","id":"sh/0f61wvep","slide":8,"bbox":[315,315,150,64]}
+{"kind":"textbox","id":"sh/1gfi50fu","slide":8,"text":"Dynamic encoder 64","textPreview":"Dynamic encoder 64","textChars":18,"textLines":1,"bbox":[323,319,134,56]}
+{"kind":"shape","id":"sh/y98j6pwn","slide":8,"bbox":[575,217,150,130]}
+{"kind":"textbox","id":"sh/zahkfud8","slide":8,"text":"Feature-wise GMU","textPreview":"Feature-wise GMU","textChars":16,"textLines":1,"bbox":[583,221,134,122]}
+{"kind":"shape","id":"sh/vutg7mdk","slide":8,"bbox":[820,250,150,64]}
+{"kind":"textbox","id":"sh/ut0fyhcz","slide":8,"text":"Regression MLP","textPreview":"Regression MLP","textChars":14,"textLines":1,"bbox":[828,254,134,56]}
+{"kind":"textbox","id":"sh/hgby9wvq","slide":8,"text":"A single 64-D feature-wise GMU gate mixes encoded static and dynamic information before a regression head. This is the no-graph comparator for GMU–GNN.","textPreview":"A single 64-D feature-wise GMU gate mixes encoded static and dynamic information before a regression head. This is the no-graph comparato...","textChars":151,"textLines":1,"bbox":[90,440,1100,105]}
+{"kind":"notes","id":"nt/zm2seo","slide":8,"text":"A single 64-D feature-wise GMU gate mixes encoded static and dynamic information before a regression head. This is the no-graph comparator for GMU–GNN.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/dj4qvo","slide":9,"title":"ARCHITECTURE 6 / 6","textShapes":11}
+{"kind":"textbox","id":"sh/4zqpgbu1","slide":9,"text":"ARCHITECTURE 6 / 6","textPreview":"ARCHITECTURE 6 / 6","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/3yh8n6dg","slide":9,"text":"GMU–GNN tests graph propagation after GMU fusion","textPreview":"GMU–GNN tests graph propagation after GMU fusion","textChars":48,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/ix87elcb","slide":9,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/d4jqt0vy","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/s3apkvud","slide":9,"bbox":[200,217,115,0]}
+{"kind":"shape","id":"sh/r218rqds","slide":9,"bbox":[200,347,115,0]}
+{"kind":"shape","id":"sh/q1s7ilc7","slide":9,"bbox":[465,217,110,0]}
+{"kind":"shape","id":"sh/98f6hwve","slide":9,"bbox":[465,347,110,0]}
+{"kind":"shape","id":"sh/876p8rut","slide":9,"bbox":[725,282,95,0]}
+{"kind":"shape","id":"sh/q9oripob","slide":9,"bbox":[970,282,85,0]}
+{"kind":"shape","id":"sh/rax8ru5w","slide":9,"bbox":[50,185,150,64]}
+{"kind":"textbox","id":"sh/cb69kz6h","slide":9,"text":"Static 11-D","textPreview":"Static 11-D","textChars":11,"textLines":1,"bbox":[58,189,134,56]}
+{"kind":"shape","id":"sh/dcfqt4n2","slide":9,"bbox":[50,315,150,64]}
+{"kind":"textbox","id":"sh/edorm9on","slide":9,"text":"Dynamic 5-lag","textPreview":"Dynamic 5-lag","textChars":13,"textLines":1,"bbox":[58,319,134,56]}
+{"kind":"shape","id":"sh/zyh8ve58","slide":9,"bbox":[315,185,150,64]}
+{"kind":"textbox","id":"sh/0zq9oj6t","slide":9,"text":"Static encoder 64","textPreview":"Static encoder 64","textChars":17,"textLines":1,"bbox":[323,189,134,56]}
+{"kind":"shape","id":"sh/10zqxony","slide":9,"bbox":[315,315,150,64]}
+{"kind":"textbox","id":"sh/m18rq9oj","slide":9,"text":"Dynamic encoder 64","textPreview":"Dynamic encoder 64","textChars":18,"textLines":1,"bbox":[323,319,134,56]}
+{"kind":"shape","id":"sh/n2h8ze54","slide":9,"bbox":[575,217,150,130]}
+{"kind":"textbox","id":"sh/j618nelc","slide":9,"text":"Feature-wise GMU","textPreview":"Feature-wise GMU","textChars":16,"textLines":1,"bbox":[583,221,134,122]}
+{"kind":"shape","id":"sh/i5s7etkr","slide":9,"bbox":[820,250,150,64]}
+{"kind":"textbox","id":"sh/58jqpo3i","slide":9,"text":"GraphConv 64","textPreview":"GraphConv 64","textChars":12,"textLines":1,"bbox":[828,254,134,56]}
+{"kind":"shape","id":"sh/k7apgj2x","slide":9,"bbox":[1055,250,150,64]}
+{"kind":"textbox","id":"sh/v2h8jel0","slide":9,"text":"Prediction","textPreview":"Prediction","textChars":10,"textLines":1,"bbox":[1063,254,134,56]}
+{"kind":"textbox","id":"sh/a187a9kv","slide":9,"text":"The upstream feature-wise GMU mechanism is followed by graph propagation and a regression head. Its gate is upstream and does not distinguish self from neighbor roles.","textPreview":"The upstream feature-wise GMU mechanism is followed by graph propagation and a regression head. Its gate is upstream and does not disting...","textChars":167,"textLines":1,"bbox":[90,440,1100,105]}
+{"kind":"notes","id":"nt/dj4qvo","slide":9,"text":"The upstream feature-wise GMU mechanism is followed by graph propagation and a regression head. Its gate is upstream and does not distinguish self from neighbor roles.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/ieefg5","slide":10,"title":"ANALYSIS APPLICABILITY","textShapes":53}
+{"kind":"textbox","id":"sh/psvm1476","slide":10,"text":"ANALYSIS APPLICABILITY","textPreview":"ANALYSIS APPLICABILITY","textChars":22,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/2pknqpov","slide":10,"text":"Comparable evidence does not require identical internal variables","textPreview":"Comparable evidence does not require identical internal variables","textChars":65,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/3qt4zupg","slide":10,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/cfm5wj6x","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"textbox","id":"sh/xgvm5o7i","slide":10,"text":"ANALYSIS","textPreview":"ANALYSIS","textChars":8,"textLines":1,"bbox":[64,150,250,38]}
+{"kind":"textbox","id":"sh/at4nu9or","slide":10,"text":"M7\nLate Fusion","textPreview":"M7 | Late Fusion","textChars":14,"textLines":2,"bbox":[310,145,135,50]}
+{"kind":"textbox","id":"sh/bud43epc","slide":10,"text":"M11\nScalar","textPreview":"M11 | Scalar","textChars":10,"textLines":2,"bbox":[455,145,135,50]}
+{"kind":"textbox","id":"sh/sj2lkf6t","slide":10,"text":"M11\nVector","textPreview":"M11 | Vector","textChars":10,"textLines":2,"bbox":[600,145,135,50]}
+{"kind":"textbox","id":"sh/tkbmtk7e","slide":10,"text":"M33\nHierarchical","textPreview":"M33 | Hierarchical","textChars":16,"textLines":2,"bbox":[745,145,135,50]}
+{"kind":"textbox","id":"sh/l072pgzi","slide":10,"text":"Original\nGMU","textPreview":"Original | GMU","textChars":12,"textLines":2,"bbox":[890,145,135,50]}
+{"kind":"textbox","id":"sh/kzy1gbyx","slide":10,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[1035,145,135,50]}
+{"kind":"shape","id":"sh/zypkn6hc","slide":10,"bbox":[64,205,1152,54]}
+{"kind":"textbox","id":"sh/yxgje1g7","slide":10,"text":"Gate health","textPreview":"Gate health","textChars":11,"textLines":1,"bbox":[76,205,225,54]}
+{"kind":"textbox","id":"sh/94r2tgzu","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[310,205,135,54]}
+{"kind":"textbox","id":"sh/83ylkby9","slide":10,"text":"△","textPreview":"△","textChars":1,"textLines":1,"bbox":[455,205,135,54]}
+{"kind":"textbox","id":"sh/72pkr6ho","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[600,205,135,54]}
+{"kind":"textbox","id":"sh/m1g3ilg3","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[745,205,135,54]}
+{"kind":"textbox","id":"sh/hsr2x0zq","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[890,205,135,54]}
+{"kind":"textbox","id":"sh/wrilovy5","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[1035,205,135,54]}
+{"kind":"shape","id":"sh/07adg3at","slide":10,"bbox":[64,272,1152,54]}
+{"kind":"textbox","id":"sh/18je9ory","slide":10,"text":"Effective gated activation","textPreview":"Effective gated activation","textChars":26,"textLines":1,"bbox":[76,272,225,54]}
+{"kind":"textbox","id":"sh/elsvetsn","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[310,272,135,54]}
+{"kind":"textbox","id":"sh/fm1w7y98","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[455,272,135,54]}
+{"kind":"textbox","id":"sh/obadk3ap","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[600,272,135,54]}
+{"kind":"textbox","id":"sh/pcjed8ra","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[745,272,135,54]}
+{"kind":"textbox","id":"sh/29svitsj","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[890,272,135,54]}
+{"kind":"textbox","id":"sh/na1wby94","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[1035,272,135,54]}
+{"kind":"shape","id":"sh/4fqd8jal","slide":10,"bbox":[64,339,1152,54]}
+{"kind":"textbox","id":"sh/5gzu14b6","slide":10,"text":"Branch contribution","textPreview":"Branch contribution","textChars":19,"textLines":1,"bbox":[76,339,225,54]}
+{"kind":"textbox","id":"sh/7a5g7mto","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[310,339,135,54]}
+{"kind":"textbox","id":"sh/m9wzehc3","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[455,339,135,54]}
+{"kind":"textbox","id":"sh/9c7y9cbe","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[600,339,135,54]}
+{"kind":"textbox","id":"sh/8behgru9","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[745,339,135,54]}
+{"kind":"textbox","id":"sh/z65g32tc","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[890,339,135,54]}
+{"kind":"textbox","id":"sh/y5wfaxcr","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[1035,339,135,54]}
+{"kind":"shape","id":"sh/l8ny5cbi","slide":10,"bbox":[64,406,1152,54]}
+{"kind":"textbox","id":"sh/k7ehc7ux","slide":10,"text":"Prediction diagnostics","textPreview":"Prediction diagnostics","textChars":22,"textLines":1,"bbox":[76,406,225,54]}
+{"kind":"textbox","id":"sh/b2lgz2tg","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[310,406,135,54]}
+{"kind":"textbox","id":"sh/a1cf6xcv","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[455,406,135,54]}
+{"kind":"textbox","id":"sh/qpwjal8f","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[600,406,135,54]}
+{"kind":"textbox","id":"sh/rapkjq90","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[745,406,135,54]}
+{"kind":"textbox","id":"sh/sbylcvql","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[890,406,135,54]}
+{"kind":"textbox","id":"sh/dc72l076","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[1035,406,135,54]}
+{"kind":"shape","id":"sh/ilwj6l8j","slide":10,"bbox":[64,473,1152,54]}
+{"kind":"textbox","id":"sh/3m5kfq9o","slide":10,"text":"Intervention / ablation","textPreview":"Intervention / ablation","textChars":23,"textLines":1,"bbox":[76,473,225,54]}
+{"kind":"textbox","id":"sh/4ne18vq9","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[310,473,135,54]}
+{"kind":"textbox","id":"sh/5on2hgru","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[455,473,135,54]}
+{"kind":"textbox","id":"sh/uhcj2187","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[600,473,135,54]}
+{"kind":"textbox","id":"sh/vilkb69s","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[745,473,135,54]}
+{"kind":"textbox","id":"sh/xcbmh4ra","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[890,473,135,54]}
+{"kind":"textbox","id":"sh/wb258jap","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[1035,473,135,54]}
+{"kind":"shape","id":"sh/bat4fe94","slide":10,"bbox":[64,540,1152,54]}
+{"kind":"textbox","id":"sh/a9kn69sj","slide":10,"text":"Graph reliance","textPreview":"Graph reliance","textChars":14,"textLines":1,"bbox":[76,540,225,54]}
+{"kind":"textbox","id":"sh/98rmd4be","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[310,540,135,54]}
+{"kind":"textbox","id":"sh/o7i54zat","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[455,540,135,54]}
+{"kind":"textbox","id":"sh/n694but8","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[600,540,135,54]}
+{"kind":"textbox","id":"sh/250n2psn","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[745,540,135,54]}
+{"kind":"textbox","id":"sh/14rm9kb2","slide":10,"text":"—","textPreview":"—","textChars":1,"textLines":1,"bbox":[890,540,135,54]}
+{"kind":"textbox","id":"sh/0ji50fah","slide":10,"text":"✓","textPreview":"✓","textChars":1,"textLines":1,"bbox":[1035,540,135,54]}
+{"kind":"textbox","id":"sh/snm5gzid","slide":10,"text":"△ Scalar M11 exposes two global coefficients, not a case-level gate distribution.","textPreview":"△ Scalar M11 exposes two global coefficients, not a case-level gate distribution.","textChars":81,"textLines":1,"bbox":[64,630,900,28]}
+{"kind":"notes","id":"nt/ieefg5","slide":10,"text":"A dash means structurally not applicable. It is not missing evidence.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/li9h7z","slide":11,"title":"PREDICTIVE PERFORMANCE","textShapes":16}
+{"kind":"textbox","id":"sh/fe98bm1o","slide":11,"text":"PREDICTIVE PERFORMANCE","textPreview":"PREDICTIVE PERFORMANCE","textChars":22,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/gfi9krit","slide":11,"text":"Scalar M11 leads test MSE; the top gated models are closely grouped","textPreview":"Scalar M11 leads test MSE; the top gated models are closely grouped","textChars":67,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/hgrqdwje","slide":11,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/6pgrehkr","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"textbox","id":"sh/7q987m1c","slide":11,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,170,210,34]}
+{"kind":"shape","id":"sh/sri9gr2x","slide":11,"bbox":[290,174,800,28]}
+{"kind":"shape","id":"sh/tcrq9wji","slide":11,"bbox":[290,174,735.26,28]}
+{"kind":"textbox","id":"sh/qlkrql0b","slide":11,"text":"4.60e-4","textPreview":"4.60e-4","textChars":7,"textLines":1,"bbox":[1100,170,110,34]}
+{"kind":"textbox","id":"sh/bmt8j61g","slide":11,"text":"M11 Scalar","textPreview":"M11 Scalar","textChars":10,"textLines":1,"bbox":[70,242,210,34]}
+{"kind":"shape","id":"sh/j2lcfu9c","slide":11,"bbox":[290,246,800,28]}
+{"kind":"shape","id":"sh/i1cb6psr","slide":11,"bbox":[290,246,85.2,28]}
+{"kind":"textbox","id":"sh/54nuh4ri","slide":11,"text":"5.32e-5","textPreview":"5.32e-5","textChars":7,"textLines":1,"bbox":[1100,242,110,34]}
+{"kind":"textbox","id":"sh/43et8zax","slide":11,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,314,210,34]}
+{"kind":"shape","id":"sh/rq5cju9o","slide":11,"bbox":[290,318,800,28]}
+{"kind":"shape","id":"sh/65wba9s3","slide":11,"bbox":[290,318,88.87,28]}
+{"kind":"textbox","id":"sh/tsnul4re","slide":11,"text":"5.55e-5","textPreview":"5.55e-5","textChars":7,"textLines":1,"bbox":[1100,314,110,34]}
+{"kind":"textbox","id":"sh/sretczat","slide":11,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[70,386,210,34]}
+{"kind":"shape","id":"sh/fu5cne9k","slide":11,"bbox":[290,390,800,28]}
+{"kind":"shape","id":"sh/etwbe9sz","slide":11,"bbox":[290,390,197.64,28]}
+{"kind":"textbox","id":"sh/a1kn2xgj","slide":11,"text":"1.24e-4","textPreview":"1.24e-4","textChars":7,"textLines":1,"bbox":[1100,386,110,34]}
+{"kind":"textbox","id":"sh/b2tov2x4","slide":11,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[70,458,210,34]}
+{"kind":"shape","id":"sh/c32547yp","slide":11,"bbox":[290,462,800,28]}
+{"kind":"shape","id":"sh/x4b6xcfa","slide":11,"bbox":[290,462,92.11,28]}
+{"kind":"textbox","id":"sh/2x0nyxgn","slide":11,"text":"5.76e-5","textPreview":"5.76e-5","textChars":7,"textLines":1,"bbox":[1100,458,110,34]}
+{"kind":"textbox","id":"sh/ny9or2hs","slide":11,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[70,530,210,34]}
+{"kind":"shape","id":"sh/ozi507yd","slide":11,"bbox":[290,534,800,28]}
+{"kind":"shape","id":"sh/p0b6tcfy","slide":11,"bbox":[290,534,121.44,28]}
+{"kind":"textbox","id":"sh/mt47uhgr","slide":11,"text":"7.59e-5","textPreview":"7.59e-5","textChars":7,"textLines":1,"bbox":[1100,530,110,34]}
+{"kind":"textbox","id":"sh/7udo3mxc","slide":11,"text":"Chronological test MSE — lower is better","textPreview":"Chronological test MSE — lower is better","textChars":40,"textLines":1,"bbox":[290,620,500,28]}
+{"kind":"notes","id":"nt/li9h7z","slide":11,"text":"M11 Scalar ranks first by MSE/RMSE/R²; Original GMU has the lowest MAE.\n\n[Sources]\n- D:/data_fusion/explainability_comparison_results.csv"}
+{"kind":"slide","id":"sl/45ebtb","slide":12,"title":"TRAINING DIAGNOSTICS","textShapes":6}
+{"kind":"textbox","id":"sh/szyl4fqx","slide":12,"text":"TRAINING DIAGNOSTICS","textPreview":"TRAINING DIAGNOSTICS","textChars":20,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/rypkbapc","slide":12,"text":"Training histories confirm checkpoint selection without test tuning","textPreview":"Training histories confirm checkpoint selection without test tuning","textChars":67,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/qxg32587","slide":12,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/5w72907m","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/4vyl0vq1","slide":12,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/3upk7qpg","slide":12,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/itw3yl8v","slide":12,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/h8n25g7a","slide":12,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/g7elwvqp","slide":12,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/i9cjut4z","slide":12,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/5cnip83a","slide":12,"text":"M7 trains longer; M33 reaches its selected validation minimum earlier. Final rankings use the untouched test period.","textPreview":"M7 trains longer; M33 reaches its selected validation minimum earlier. Final rankings use the untouched test period.","textChars":116,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/8ba9kjul","slide":12,"name":"","alt":"train_validation_loss_M7_Late_Fusion_Complete_Explainability.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/7a18bed0","slide":12,"name":"","alt":"hierarchical_training_diagnostics.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/45ebtb","slide":12,"text":"M7 trains longer; M33 reaches its selected validation minimum earlier. Final rankings use the untouched test period.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/train_validation_loss_M7_Late_Fusion_Complete_Explainability.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_training_diagnostics.png"}
+{"kind":"slide","id":"sl/glc996","slide":13,"title":"TRAINING DIAGNOSTICS","textShapes":6}
+{"kind":"textbox","id":"sh/utgjuhgz","slide":13,"text":"TRAINING DIAGNOSTICS","textPreview":"TRAINING DIAGNOSTICS","textChars":20,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/hw725wfq","slide":13,"text":"Gated models converge under the same chronological protocol","textPreview":"Gated models converge under the same chronological protocol","textChars":59,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/gvy1wry5","slide":13,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/3ypk7mxg","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/ixgjyhgv","slide":13,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/5kr29wfm","slide":13,"text":"M11 Scalar","textPreview":"M11 Scalar","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/4zi10ry1","slide":13,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/j25kv2hc","slide":13,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/y1wjmxgr","slide":13,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/s3e9w3id","slide":13,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/725s3y1s","slide":13,"text":"Gate or coefficient histories are diagnostic; checkpoint selection is driven by validation MSE.","textPreview":"Gate or coefficient histories are diagnostic; checkpoint selection is driven by validation MSE.","textChars":95,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/uhk7y5gf","slide":13,"name":"","alt":"scalar_training_validation_coefficients.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/hkbq90fq","slide":13,"name":"","alt":"m11_vector_gate_training_history.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/glc996","slide":13,"text":"Gate or coefficient histories are diagnostic; checkpoint selection is driven by validation MSE.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Scalar_Complete_Explainability/scalar_training_validation_coefficients.png\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/m11_vector_gate_training_history.png"}
+{"kind":"slide","id":"sl/xgem8t","slide":14,"title":"PREDICTION DIAGNOSTICS","textShapes":6}
+{"kind":"textbox","id":"sh/zqpgzilk","slide":14,"text":"PREDICTION DIAGNOSTICS","textPreview":"PREDICTION DIAGNOSTICS","textChars":22,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/kryhsnm5","slide":14,"text":"The new M7 diagnostic exposes calibration structure directly","textPreview":"The new M7 diagnostic exposes calibration structure directly","textChars":60,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/lsry1s3q","slide":14,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/algfmd43","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/bmpgvilo","slide":14,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/cnyxonm9","slide":14,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/xo7yxs3u","slide":14,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/2xwfid47","slide":14,"text":"M11 Scalar","textPreview":"M11 Scalar","textChars":10,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/ny5gry5c","slide":14,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/3ax0bmd0","slide":14,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/4v6h4rul","slide":14,"text":"M11 Scalar follows the identity line more tightly; M7 shows substantially broader, structured residuals.","textPreview":"M11 Scalar follows the identity line more tightly; M7 shows substantially broader, structured residuals.","textChars":104,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/lcnil832","slide":14,"name":"","alt":"late_fusion_prediction_diagnostics.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/y9czqd4r","slide":14,"name":"","alt":"scalar_prediction_diagnostics.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/xgem8t","slide":14,"text":"M11 Scalar follows the identity line more tightly; M7 shows substantially broader, structured residuals.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_prediction_diagnostics.png\n- D:/data_fusion/results_new/M11_Gate_Scalar_Complete_Explainability/scalar_prediction_diagnostics.png"}
+{"kind":"slide","id":"sl/z6zjnw","slide":15,"title":"PREDICTION DIAGNOSTICS","textShapes":6}
+{"kind":"textbox","id":"sh/relwrmp0","slide":15,"text":"PREDICTION DIAGNOSTICS","textPreview":"PREDICTION DIAGNOSTICS","textChars":22,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/sfudkr6l","slide":15,"text":"Vector M11 remains tighter than the hierarchical model","textPreview":"Vector M11 remains tighter than the hierarchical model","textChars":54,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/dg3etw76","slide":15,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/ipsveh8j","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/3qlwnmp4","slide":15,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/4rudg7q9","slide":15,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/5s3epc7u","slide":15,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/ulsvax87","slide":15,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/vm1wj2ps","slide":15,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/vepcb2h8","slide":15,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/wfyt47yt","slide":15,"text":"Both track the target, but hierarchical residual dispersion is visibly larger.","textPreview":"Both track the target, but hierarchical residual dispersion is visibly larger.","textChars":78,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/pkbqh872","slide":15,"name":"","alt":"m11_prediction_diagnostics.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/2hk7mdor","slide":15,"name":"","alt":"hierarchical_prediction_diagnostics.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/z6zjnw","slide":15,"text":"Both track the target, but hierarchical residual dispersion is visibly larger.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/m11_prediction_diagnostics.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_prediction_diagnostics.png"}
+{"kind":"slide","id":"sl/oe3jh2","slide":16,"title":"PREDICTION DIAGNOSTICS","textShapes":6}
+{"kind":"textbox","id":"sh/jitcjul0","slide":16,"text":"PREDICTION DIAGNOSTICS","textPreview":"PREDICTION DIAGNOSTICS","textChars":22,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/4j2dcz2l","slide":16,"text":"Adding graph propagation slightly widens GMU residuals","textPreview":"Adding graph propagation slightly widens GMU residuals","textChars":54,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/5kbul436","slide":16,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/ad0b6pkj","slide":16,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/ve9cful4","slide":16,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/wf2t8f2p","slide":16,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/xgbuhk3a","slide":16,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/e94vi9kn","slide":16,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/fadcre18","slide":16,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/z2l8vax8","slide":16,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/03u9ofyd","slide":16,"text":"Original GMU has lower test error than GMU–GNN under this checkpoint-matched comparison.","textPreview":"Original GMU has lower test error than GMU–GNN under this checkpoint-matched comparison.","textChars":88,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/hg729o3y","slide":16,"name":"","alt":"gmu_prediction_diagnostics.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/utgje94n","slide":16,"name":"","alt":"gmu_prediction_diagnostics.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/oe3jh2","slide":16,"text":"Original GMU has lower test error than GMU–GNN under this checkpoint-matched comparison.\n\n[Sources]\n- D:/data_fusion/results_new/Original_GMU_Only_Complete_Explainability/gmu_prediction_diagnostics.png\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_prediction_diagnostics.png"}
+{"kind":"slide","id":"sl/ktvbx2","slide":17,"title":"GATE ANALYSIS","textShapes":6}
+{"kind":"textbox","id":"sh/t0radk3m","slide":17,"text":"GATE ANALYSIS","textPreview":"GATE ANALYSIS","textChars":13,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/6d0b254v","slide":17,"text":"Gate health requires variation, entropy and saturation—not only a mean","textPreview":"Gate health requires variation, entropy and saturation—not only a mean","textChars":70,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/re9sbalg","slide":17,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/4byt0vm5","slide":17,"text":"17","textPreview":"17","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/5cra903q","slide":17,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/i9gbyl4z","slide":17,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/japs7qlk","slide":17,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/o72tcz29","slide":17,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/p8bul43u","slide":17,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/9c7i1w7u","slide":17,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/m9wz61oj","slide":17,"text":"Both models retain feature-wise variation without global saturation.","textPreview":"Both models retain feature-wise variation without global saturation.","textChars":68,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/j2ds7mp4","slide":17,"name":"","alt":"professional_gate_health.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/k3m9gr6p","slide":17,"name":"","alt":"gmu_professional_gate_health.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/ktvbx2","slide":17,"text":"Both models retain feature-wise variation without global saturation.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_gate_health.png\n- D:/data_fusion/results_new/Original_GMU_Only_Complete_Explainability/gmu_professional_gate_health.png"}
+{"kind":"slide","id":"sl/j2ajq7","slide":18,"title":"GATE ANALYSIS","textShapes":6}
+{"kind":"textbox","id":"sh/3mpg3itk","slide":18,"text":"GATE ANALYSIS","textPreview":"GATE ANALYSIS","textChars":13,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/4nyxcnu5","slide":18,"text":"Upstream GMU gates differ after graph training","textPreview":"Upstream GMU gates differ after graph training","textChars":46,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/5o7y5sbq","slide":18,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/qpgfedcb","slide":18,"text":"18","textPreview":"18","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/rqpg7itw","slide":18,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/sryxgnuh","slide":18,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/dc7y9sb2","slide":18,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/ed0zixc7","slide":18,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/fe9gb2ts","slide":18,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/72xgr2tc","slide":18,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/s36x07ax","slide":18,"text":"GMU–GNN uses one upstream gate; M11 Vector separates self and neighbor mixing roles.","textPreview":"GMU–GNN uses one upstream gate; M11 Vector separates self and neighbor mixing roles.","textChars":84,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/9gnydc32","slide":18,"name":"","alt":"gmu_professional_gate_health.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/mdwfixkb","slide":18,"name":"","alt":"m11_global_vector_gate_analysis.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/j2ajq7","slide":18,"text":"GMU–GNN uses one upstream gate; M11 Vector separates self and neighbor mixing roles.\n\n[Sources]\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_professional_gate_health.png\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/m11_global_vector_gate_analysis.png"}
+{"kind":"slide","id":"sl/ug9fuu","slide":19,"title":"EFFECTIVE GATED ACTIVATION","textShapes":6}
+{"kind":"textbox","id":"sh/dw76lo3q","slide":19,"text":"EFFECTIVE GATED ACTIVATION","textPreview":"EFFECTIVE GATED ACTIVATION","textChars":26,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/qtw7a9kf","slide":19,"text":"Raw scalar coefficients and effective activation tell different stories","textPreview":"Raw scalar coefficients and effective activation tell different stories","textChars":71,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/rupojel0","slide":19,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/4rep8jm9","slide":19,"text":"19","textPreview":"19","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/5sn6h43u","slide":19,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/i5wn6943","slide":19,"text":"M11 Scalar","textPreview":"M11 Scalar","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/365ofelo","slide":19,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/g3e54zmd","slide":19,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/h4n6d43y","slide":19,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/d4rupoza","slide":19,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/q1gbu90j","slide":19,"text":"Scalar coefficients near 0.47 coexist with roughly 94% effective static activation.","textPreview":"Scalar coefficients near 0.47 coexist with roughly 94% effective static activation.","textChars":83,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/7epsfy18","slide":19,"name":"","alt":"scalar_health_effective_roles.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/8fy983it","slide":19,"name":"","alt":"professional_effective_activation_contribution.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/ug9fuu","slide":19,"text":"Scalar coefficients near 0.47 coexist with roughly 94% effective static activation.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Scalar_Complete_Explainability/scalar_health_effective_roles.png\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_effective_activation_contribution.png"}
+{"kind":"slide","id":"sl/6xvoat","slide":20,"title":"EFFECTIVE GATED ACTIVATION","textShapes":6}
+{"kind":"textbox","id":"sh/ut4fu58r","slide":20,"text":"EFFECTIVE GATED ACTIVATION","textPreview":"EFFECTIVE GATED ACTIVATION","textChars":26,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/hwfy507i","slide":20,"text":"Both GMU models are effectively static-heavy despite sub-0.5 mean gates","textPreview":"Both GMU models are effectively static-heavy despite sub-0.5 mean gates","textChars":71,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/gv6xwvqx","slide":20,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/3yxg7ap8","slide":20,"text":"20","textPreview":"20","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/2xofy58n","slide":20,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/pkfy9k7e","slide":20,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/4j6h0f6t","slide":20,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/rmxgbapk","slide":20,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/qloz2poz","slide":20,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/03m587ed","slide":20,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/fid4z2ds","slide":20,"text":"Effective static activation is about 89% for Original GMU and 91% for GMU–GNN.","textPreview":"Effective static activation is about 89% for Original GMU and 91% for GMU–GNN.","textChars":78,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/atwfet47","slide":20,"name":"","alt":"gmu_effective_activation_contribution.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/xwnyp83y","slide":20,"name":"","alt":"gmu_effective_activation_contribution.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/6xvoat","slide":20,"text":"Effective static activation is about 89% for Original GMU and 91% for GMU–GNN.\n\n[Sources]\n- D:/data_fusion/results_new/Original_GMU_Only_Complete_Explainability/gmu_effective_activation_contribution.png\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_effective_activation_contribution.png"}
+{"kind":"slide","id":"sl/omk6r4","slide":21,"title":"BRANCH CONTRIBUTION","textShapes":6}
+{"kind":"textbox","id":"sh/betoju10","slide":21,"text":"BRANCH CONTRIBUTION","textPreview":"BRANCH CONTRIBUTION","textChars":19,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/wf2psf2l","slide":21,"text":"Non-gated contribution must use branch-specific terminology","textPreview":"Non-gated contribution must use branch-specific terminology","textChars":59,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/xgb6lkj6","slide":21,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/m907m5kj","slide":21,"text":"21","textPreview":"21","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/na9oval4","slide":21,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/obipof2p","slide":21,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/9cb6hkja","slide":21,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/el0ni5kn","slide":21,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/z69orals","slide":21,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/3ahs3m1g","slide":21,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/4bq9cr21","slide":21,"text":"M7 reports weighted branch-output magnitude; M33 reports occlusion-based branch share and nonlinear interaction.","textPreview":"M7 reports weighted branch-output magnitude; M33 reports occlusion-based branch share and nonlinear interaction.","textChars":112,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/xgb2pg3m","slide":21,"name":"","alt":"late_fusion_effective_contribution.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/atk3u1kb","slide":21,"name":"","alt":"hierarchical_global_contribution.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/omk6r4","slide":21,"text":"M7 reports weighted branch-output magnitude; M33 reports occlusion-based branch share and nonlinear interaction.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_effective_contribution.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_global_contribution.png"}
+{"kind":"slide","id":"sl/w29fb8","slide":22,"title":"SPECIALIZATION","textShapes":6}
+{"kind":"textbox","id":"sh/a90rmx0v","slide":22,"text":"SPECIALIZATION","textPreview":"SPECIALIZATION","textChars":14,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/xcbaxcjm","slide":22,"text":"Vector gates expose feature-wise specialization","textPreview":"Vector gates expose feature-wise specialization","textChars":47,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/cb29o7i1","slide":22,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/n698r214","slide":22,"text":"22","textPreview":"22","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/250rix0z","slide":22,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/p8ratcja","slide":22,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/o7i9k7ip","slide":22,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/f2p8ni18","slide":22,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/e1gred0n","slide":22,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/kn2t0vat","slide":22,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/zmtsrq98","slide":22,"text":"Latent dimensions specialize differently; these dimensions are not direct original-feature importances.","textPreview":"Latent dimensions specialize differently; these dimensions are not direct original-feature importances.","textChars":103,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/2lsbaxoz","slide":22,"name":"","alt":"professional_featurewise_gate_specialization.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/pojulsna","slide":22,"name":"","alt":"gmu_featurewise_gate_specialization.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/w29fb8","slide":22,"text":"Latent dimensions specialize differently; these dimensions are not direct original-feature importances.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_featurewise_gate_specialization.png\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_featurewise_gate_specialization.png"}
+{"kind":"slide","id":"sl/vpc4at","slide":23,"title":"ROLE-SPECIFIC FUSION","textShapes":6}
+{"kind":"textbox","id":"sh/ihgjm9s7","slide":23,"text":"ROLE-SPECIFIC FUSION","textPreview":"ROLE-SPECIFIC FUSION","textChars":20,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/54rihoby","slide":23,"text":"Only M11 Vector distinguishes self and neighbor modality roles","textPreview":"Only M11 Vector distinguishes self and neighbor modality roles","textChars":62,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/43y1ojad","slide":23,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/vep0betg","slide":23,"text":"23","textPreview":"23","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/udgji9sb","slide":23,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/hg7idobm","slide":23,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/gfy1kja1","slide":23,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/fa9kny90","slide":23,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/e90jutsf","slide":23,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/czahgry5","slide":23,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/by1g76xk","slide":23,"text":"Role separation is an architectural capability, not a missing score for single-gate or non-gated models.","textPreview":"Role separation is an architectural capability, not a missing score for single-gate or non-gated models.","textChars":104,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/6lsb6toj","slide":23,"name":"","alt":"professional_self_neighbor_role_separation.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/t8juhona","slide":23,"name":"","alt":"m11_spatial_temporal_gate_analysis.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/vpc4at","slide":23,"text":"Role separation is an architectural capability, not a missing score for single-gate or non-gated models.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_self_neighbor_role_separation.png\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/m11_spatial_temporal_gate_analysis.png"}
+{"kind":"slide","id":"sl/90msdv","slide":24,"title":"CONDITIONAL BEHAVIOR","textShapes":6}
+{"kind":"textbox","id":"sh/zuh4zeh0","slide":24,"text":"CONDITIONAL BEHAVIOR","textPreview":"CONDITIONAL BEHAVIOR","textChars":20,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/0vq58jyl","slide":24,"text":"Fusion behavior changes with crime intensity, but association is not causation","textPreview":"Fusion behavior changes with crime intensity, but association is not causation","textChars":78,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/lwzm1oz6","slide":24,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/mx8natgr","slide":24,"text":"24","textPreview":"24","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/nyho3yhc","slide":24,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/8zq5c3yx","slide":24,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/90j65ozi","slide":24,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/21onyp0n","slide":24,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/32x4ruh8","slide":24,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/nix4bmpk","slide":24,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/8365krq5","slide":24,"text":"M11 Vector’s self and neighbor roles move in different directions; GMU has one shared upstream role.","textPreview":"M11 Vector’s self and neighbor roles move in different directions; GMU has one shared upstream role.","textChars":100,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/xoj6h0b2","slide":24,"name":"","alt":"professional_gate_crime_associations.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/al87m5cb","slide":24,"name":"","alt":"gmu_gate_crime_associations.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/90msdv","slide":24,"text":"M11 Vector’s self and neighbor roles move in different directions; GMU has one shared upstream role.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_gate_crime_associations.png\n- D:/data_fusion/results_new/Original_GMU_Only_Complete_Explainability/gmu_gate_crime_associations.png"}
+{"kind":"slide","id":"sl/fkawmt","slide":25,"title":"STABILITY","textShapes":6}
+{"kind":"textbox","id":"sh/ormls3ud","slide":25,"text":"STABILITY","textPreview":"STABILITY","textChars":9,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/3qdkzyt8","slide":25,"text":"Node heterogeneity can coexist with stable citywide behavior","textPreview":"Node heterogeneity can coexist with stable citywide behavior","textChars":60,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/2p43qtcn","slide":25,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/hov2xov2","slide":25,"text":"25","textPreview":"25","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/gnmlo3uh","slide":25,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/fmdkvydw","slide":25,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/ulk3mtcb","slide":25,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/tkb2tovq","slide":25,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/sz2lkjul","slide":25,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/i18v258j","slide":25,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/54zedk7u","slide":25,"text":"Spatial variation is meaningful even when average temporal patterns appear stable.","textPreview":"Spatial variation is meaningful even when average temporal patterns appear stable.","textChars":82,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/kzyxsz6l","slide":25,"name":"","alt":"late_fusion_spatial_temporal_stability.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/zy5gjup0","slide":25,"name":"","alt":"hierarchical_spatial_temporal.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/fkawmt","slide":25,"text":"Spatial variation is meaningful even when average temporal patterns appear stable.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_spatial_temporal_stability.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_spatial_temporal.png"}
+{"kind":"slide","id":"sl/rdx51j","slide":26,"title":"STABILITY","textShapes":6}
+{"kind":"textbox","id":"sh/w3m9w7i5","slide":26,"text":"STABILITY","textPreview":"STABILITY","textChars":9,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/v2ds321k","slide":26,"text":"Gate variation differs across vector and GMU–GNN architectures","textPreview":"Gate variation differs across vector and GMU–GNN architectures","textChars":62,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/u14rux0z","slide":26,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/90va1sje","slide":26,"text":"26","textPreview":"26","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/8fm9snit","slide":26,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/7edszi1o","slide":26,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/md4rqd03","slide":26,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/twzadczy","slide":26,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/sv694rid","slide":26,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/u10zy9sr","slide":26,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/h4ri94ri","slide":26,"text":"Stability analysis describes where learned mixing changes; it does not rank predictive quality.","textPreview":"Stability analysis describes where learned mixing changes; it does not rank predictive quality.","textChars":95,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/8z29oret","slide":26,"name":"","alt":"professional_spatial_temporal_gate_stability.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/7yt8vmd8","slide":26,"name":"","alt":"gmu_spatial_temporal_gate_stability.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/rdx51j","slide":26,"text":"Stability analysis describes where learned mixing changes; it does not rank predictive quality.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_spatial_temporal_gate_stability.png\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_spatial_temporal_gate_stability.png"}
+{"kind":"slide","id":"sl/206edc","slide":27,"title":"ERROR ASSOCIATION","textShapes":6}
+{"kind":"textbox","id":"sh/gru9ofel","slide":27,"text":"ERROR ASSOCIATION","textPreview":"ERROR ASSOCIATION","textChars":17,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/vql8fax0","slide":27,"text":"Fusion balance is associated with difficult cases","textPreview":"Fusion balance is associated with difficult cases","textChars":49,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/upcrmpgf","slide":27,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/to3qdkfu","slide":27,"text":"27","textPreview":"27","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/8na9kfyp","slide":27,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/7m18bax4","slide":27,"text":"M11 Scalar","textPreview":"M11 Scalar","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/6lsri5gj","slide":27,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/l0jq90fy","slide":27,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/kza9gvyd","slide":27,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/idcnyxkb","slide":27,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/5g36tsj2","slide":27,"text":"Error-conditioned trends are descriptive; intervention results provide stronger faithfulness evidence.","textPreview":"Error-conditioned trends are descriptive; intervention results provide stronger faithfulness evidence.","textChars":102,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/kvedszax","slide":27,"name":"","alt":"scalar_effective_balance_error.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/zu5wzu9c","slide":27,"name":"","alt":"hierarchical_share_error.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/206edc","slide":27,"text":"Error-conditioned trends are descriptive; intervention results provide stronger faithfulness evidence.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Scalar_Complete_Explainability/scalar_effective_balance_error.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_share_error.png"}
+{"kind":"slide","id":"sl/oac00c","slide":28,"title":"INTERVENTION FAITHFULNESS","textShapes":6}
+{"kind":"textbox","id":"sh/crux0fu5","slide":28,"text":"INTERVENTION FAITHFULNESS","textPreview":"INTERVENTION FAITHFULNESS","textChars":25,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/b61grat0","slide":28,"text":"Dynamic evidence is essential in both non-gated architectures","textPreview":"Dynamic evidence is essential in both non-gated architectures","textChars":61,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/q5sfy5cf","slide":28,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/p4jyp0bu","slide":28,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/o3axwvu9","slide":28,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/321gnqto","slide":28,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/21sfulc3","slide":28,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/10jylgbi","slide":28,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/gzqxsvux","slide":28,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/u58zuxsj","slide":28,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/18zi5cba","slide":28,"text":"Dynamic removal or shuffling causes the largest degradation. The M33 null-embedding check is excluded from this comparison.","textPreview":"Dynamic removal or shuffling causes the largest degradation. The M33 null-embedding check is excluded from this comparison.","textChars":123,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/0fipcneh","slide":28,"name":"","alt":"late_fusion_branch_interventions.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/fe98jixw","slide":28,"name":"","alt":"hierarchical_branch_interventions.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/oac00c","slide":28,"text":"Dynamic removal or shuffling causes the largest degradation. The M33 null-embedding check is excluded from this comparison.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_branch_interventions.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_branch_interventions.png"}
+{"kind":"slide","id":"sl/lrrqbr","slide":29,"title":"INTERVENTION FAITHFULNESS","textShapes":6}
+{"kind":"textbox","id":"sh/vydwzah0","slide":29,"text":"INTERVENTION FAITHFULNESS","textPreview":"INTERVENTION FAITHFULNESS","textChars":25,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/gzmdsfyl","slide":29,"text":"Learned vector gates are behaviorally consequential","textPreview":"Learned vector gates are behaviorally consequential","textChars":51,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/h0ve1kz6","slide":29,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/6tkvm5g3","slide":29,"text":"29","textPreview":"29","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/7udwvaho","slide":29,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/8vmdofy9","slide":29,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/twvexkzu","slide":29,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/qpovypgn","slide":29,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/rqxw7ux8","slide":29,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/vuxsfyd4","slide":29,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/wv69o3ep","slide":29,"text":"Forcing or shuffling gates degrades performance, supporting reliance on learned assignments.","textPreview":"Forcing or shuffling gates degrades performance, supporting reliance on learned assignments.","textChars":92,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/t0je1gb2","slide":29,"name":"","alt":"professional_gate_intervention_faithfulness.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/6d8vq1sb","slide":29,"name":"","alt":"gmu_gate_intervention_faithfulness.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/lrrqbr","slide":29,"text":"Forcing or shuffling gates degrades performance, supporting reliance on learned assignments.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_gate_intervention_faithfulness.png\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_gate_intervention_faithfulness.png"}
+{"kind":"slide","id":"sl/ehase6","slide":30,"title":"FEATURE EVIDENCE","textShapes":6}
+{"kind":"textbox","id":"sh/sbexg7q5","slide":30,"text":"FEATURE EVIDENCE","textPreview":"FEATURE EVIDENCE","textChars":16,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/ra5gnmp0","slide":30,"text":"Recent crime lags dominate permutation importance","textPreview":"Recent crime lags dominate permutation importance","textChars":49,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/q9wfeh8f","slide":30,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/58nylc7u","slide":30,"text":"30","textPreview":"30","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/47exc7q9","slide":30,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/365wj2po","slide":30,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/i5wfax83","slide":30,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/hknehs7i","slide":30,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/wjuxonqd","slide":30,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/excne5g7","slide":30,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/103mpkfy","slide":30,"text":"Static features add smaller, model-dependent increments; correlated features can share importance.","textPreview":"Static features add smaller, model-dependent increments; correlated features can share importance.","textChars":98,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/8vexsre5","slide":30,"name":"","alt":"late_fusion_input_permutation.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/7u5wzmdk","slide":30,"name":"","alt":"hierarchical_input_permutation.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/ehase6","slide":30,"text":"Static features add smaller, model-dependent increments; correlated features can share importance.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_input_permutation.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_input_permutation.png"}
+{"kind":"slide","id":"sl/jd4ktg","slide":31,"title":"GRAPH RELIANCE","textShapes":6}
+{"kind":"textbox","id":"sh/gbqxkrm5","slide":31,"text":"GRAPH RELIANCE","textPreview":"GRAPH RELIANCE","textChars":14,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/vahwbm5k","slide":31,"text":"Graph value depends on where propagation occurs","textPreview":"Graph value depends on where propagation occurs","textChars":47,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/u98fih4z","slide":31,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/t8ze9cne","slide":31,"text":"31","textPreview":"31","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/8nqdg7mt","slide":31,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/7mhw7258","slide":31,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/6lovex4n","slide":31,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/lkfe5cn2","slide":31,"text":"GMU–GNN","textPreview":"GMU–GNN","textChars":7,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/kj6dc7mx","slide":31,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/et0n6d03","slide":31,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/1wrm18je","slide":31,"text":"Removing edges improves M7 but harms GMU–GNN, so graph structure is not uniformly beneficial.","textPreview":"Removing edges improves M7 but harms GMU–GNN, so graph structure is not uniformly beneficial.","textChars":93,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/s3q58vmt","slide":31,"name":"","alt":"late_fusion_graph_intervention.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/r2hofql8","slide":31,"name":"","alt":"gmu_gnn_graph_intervention.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/jd4ktg","slide":31,"text":"Removing edges improves M7 but harms GMU–GNN, so graph structure is not uniformly beneficial.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_graph_intervention.png\n- D:/data_fusion/results_new/GMU_GNN_Complete_Explainability/gmu_gnn_graph_intervention.png"}
+{"kind":"slide","id":"sl/u7zvw7","slide":32,"title":"HIERARCHY EVIDENCE","textShapes":6}
+{"kind":"textbox","id":"sh/0be5w3yp","slide":32,"text":"HIERARCHY EVIDENCE","textPreview":"HIERARCHY EVIDENCE","textChars":18,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/zq5onyh4","slide":32,"text":"The post-fusion graph stage is central to M33 behavior","textPreview":"The post-fusion graph stage is central to M33 behavior","textChars":54,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/ypcnutgj","slide":32,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/9gn6t8z6","slide":32,"text":"32","textPreview":"32","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/8fe503yl","slide":32,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/ne5orih0","slide":32,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/mdwnydgv","slide":32,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/xk76xszi","slide":32,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/wjy54nyx","slide":32,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/ap4j61sb","slide":32,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/xsf21wr2","slide":32,"text":"Bypassing the joint graph stage is a frozen-model intervention; stage embeddings are qualitative context.","textPreview":"Bypassing the joint graph stage is a frozen-model intervention; stage embeddings are qualitative context.","textChars":105,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/cbi9wbyh","slide":32,"name":"","alt":"hierarchy_level_interventions.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/ba9836hw","slide":32,"name":"","alt":"hierarchical_stage_tsne.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/u7zvw7","slide":32,"text":"Bypassing the joint graph stage is a frozen-model intervention; stage embeddings are qualitative context.\n\n[Sources]\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchy_level_interventions.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_stage_tsne.png"}
+{"kind":"slide","id":"sl/lyih7v","slide":33,"title":"UNCERTAINTY","textShapes":6}
+{"kind":"textbox","id":"sh/b2d83a5k","slide":33,"text":"UNCERTAINTY","textPreview":"UNCERTAINTY","textChars":11,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/c3m9wfm5","slide":33,"text":"Time-cluster intervals quantify test-window variability","textPreview":"Time-cluster intervals quantify test-window variability","textChars":55,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/d4vq5knq","slide":33,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/y54ry54b","slide":33,"text":"33","textPreview":"33","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/z6ds7a5w","slide":33,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/07m90fm1","slide":33,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/lsfa9knm","slide":33,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/e9krml4r","slide":33,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/fat8vq5c","slide":33,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/jyls7ydw","slide":33,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/kzu903uh","slide":33,"text":"Cluster bootstrap is preferable to treating every node-window row as independent, but it does not replace matched-seed retraining.","textPreview":"Cluster bootstrap is preferable to treating every node-window row as independent, but it does not replace matched-seed retraining.","textChars":130,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/5svqlcbu","slide":33,"name":"","alt":"late_fusion_bootstrap_ci.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/i5k7axc3","slide":33,"name":"","alt":"hierarchical_bootstrap_ci.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/lyih7v","slide":33,"text":"Cluster bootstrap is preferable to treating every node-window row as independent, but it does not replace matched-seed retraining.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_bootstrap_ci.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_bootstrap_ci.png"}
+{"kind":"slide","id":"sl/ja66df","slide":34,"title":"UNCERTAINTY","textShapes":6}
+{"kind":"textbox","id":"sh/nqlkzilw","slide":34,"text":"UNCERTAINTY","textPreview":"UNCERTAINTY","textChars":11,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/oru1sn2h","slide":34,"text":"Gate uncertainty remains narrow across test windows","textPreview":"Gate uncertainty remains narrow across test windows","textChars":51,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/9s32183m","slide":34,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/atcjudk7","slide":34,"text":"34","textPreview":"34","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/bu5k3ils","slide":34,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/wve1wn2d","slide":34,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/xwn25s3y","slide":34,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/yxwjyxkj","slide":34,"text":"Original GMU","textPreview":"Original GMU","textChars":12,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/ji5k72l4","slide":34,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/rqh8fed4","slide":34,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/sra98jep","slide":34,"text":"Narrow intervals reflect many test cases and stable window-level summaries—not certainty across training seeds.","textPreview":"Narrow intervals reflect many test cases and stable window-level summaries—not certainty across training seeds.","textChars":111,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/dg3ad8ny","slide":34,"name":"","alt":"professional_gate_bootstrap_ci.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/qtcbid47","slide":34,"name":"","alt":"gmu_gate_bootstrap_ci.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/ja66df","slide":34,"text":"Narrow intervals reflect many test cases and stable window-level summaries—not certainty across training seeds.\n\n[Sources]\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/professional_gate_bootstrap_ci.png\n- D:/data_fusion/results_new/Original_GMU_Only_Complete_Explainability/gmu_gate_bootstrap_ci.png"}
+{"kind":"slide","id":"sl/848jba","slide":35,"title":"REPRESENTATIONS","textShapes":6}
+{"kind":"textbox","id":"sh/v2lwbi5c","slide":35,"text":"REPRESENTATIONS","textPreview":"REPRESENTATIONS","textChars":15,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/w3ux4nmx","slide":35,"text":"Embedding projections remain qualitative supporting evidence","textPreview":"Embedding projections remain qualitative supporting evidence","textChars":60,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/x43edsni","slide":35,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/mdcfyd4f","slide":35,"text":"35","textPreview":"35","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/nelw7y50","slide":35,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/8fux03ml","slide":35,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/9g3e98n6","slide":35,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/e9svut4j","slide":35,"text":"M33 Hierarchical","textPreview":"M33 Hierarchical","textChars":16,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/za1w3y54","slide":35,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/ny1srilk","slide":35,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/8za9kn25","slide":35,"text":"Projection axes have no direct physical meaning; predictive and intervention evidence carry the main conclusions.","textPreview":"Projection axes have no direct physical meaning; predictive and intervention evidence carry the main conclusions.","textChars":113,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/dgvyxkjm","slide":35,"name":"","alt":"late_fusion_embedding_tsne_robust.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/qdkz2p0v","slide":35,"name":"","alt":"hierarchical_stage_tsne.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/848jba","slide":35,"text":"Projection axes have no direct physical meaning; predictive and intervention evidence carry the main conclusions.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/late_fusion_embedding_tsne_robust.png\n- D:/data_fusion/results_new/M33_Hierarchical_Fusion_Complete_Explainability/hierarchical_stage_tsne.png"}
+{"kind":"slide","id":"sl/qthtyv","slide":36,"title":"LOCAL CONTEXT","textShapes":6}
+{"kind":"textbox","id":"sh/g7mlk3u5","slide":36,"text":"LOCAL CONTEXT","textPreview":"LOCAL CONTEXT","textChars":13,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/f6dkbydk","slide":36,"text":"Local examples explain behavior without becoming the headline result","textPreview":"Local examples explain behavior without becoming the headline result","textChars":68,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/e543itcz","slide":36,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/t4v29ove","slide":36,"text":"36","textPreview":"36","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"shape","id":"sh/s3mlgjut","slide":36,"bbox":[64,150,260,29]}
+{"kind":"textbox","id":"sh/r2tk7ed8","slide":36,"text":"M7 Late Fusion","textPreview":"M7 Late Fusion","textChars":14,"textLines":1,"bbox":[70,150,248,29]}
+{"kind":"shape","id":"sh/61k3etc3","slide":36,"bbox":[660,150,260,29]}
+{"kind":"textbox","id":"sh/d0fmlsvy","slide":36,"text":"M11 Vector","textPreview":"M11 Vector","textChars":10,"textLines":1,"bbox":[666,150,248,29]}
+{"kind":"shape","id":"sh/cz6lsnud","slide":36,"bbox":[64,190,556,370]}
+{"kind":"shape","id":"sh/uhkva1kj","slide":36,"bbox":[660,190,556,370]}
+{"kind":"textbox","id":"sh/hkbulg3a","slide":36,"text":"Representative cases illustrate temporal and neighborhood context; they do not establish population-wide effects.","textPreview":"Representative cases illustrate temporal and neighborhood context; they do not establish population-wide effects.","textChars":113,"textLines":1,"bbox":[64,585,1152,60]}
+{"kind":"image","id":"im/4bul4z2h","slide":36,"name":"","alt":"M7_Late_Fusion_Complete_Explainability_high_crime_node_397.png","bbox":[76,202,532,346]}
+{"kind":"image","id":"im/3alkbelw","slide":36,"name":"","alt":"m11_high_crime_node_neighborhood.png","bbox":[672,202,532,346]}
+{"kind":"notes","id":"nt/qthtyv","slide":36,"text":"Representative cases illustrate temporal and neighborhood context; they do not establish population-wide effects.\n\n[Sources]\n- D:/data_fusion/results_new/M7_Late_Fusion_Complete_Explainability/M7_Late_Fusion_Complete_Explainability_high_crime_node_397.png\n- D:/data_fusion/results_new/M11_Gate_Vector_only_Explainability/m11_high_crime_node_neighborhood.png"}
+{"kind":"slide","id":"sl/vunazu","slide":37,"title":"SYNTHESIS","textShapes":18}
+{"kind":"textbox","id":"sh/hw7mto7i","slide":37,"text":"SYNTHESIS","textPreview":"SYNTHESIS","textChars":9,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/utgni9o7","slide":37,"text":"Adaptive fusion performs best, but graph value and contribution remain model-specific","textPreview":"Adaptive fusion performs best, but graph value and contribution remain model-specific","textChars":85,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/fup4repc","slide":37,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/srelgz61","slide":37,"text":"37","textPreview":"37","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"textbox","id":"sh/ts7mp47m","slide":37,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[70,155,55,55]}
+{"kind":"textbox","id":"sh/6pw3epov","slide":37,"text":"Prediction","textPreview":"Prediction","textChars":10,"textLines":1,"bbox":[145,155,190,35]}
+{"kind":"textbox","id":"sh/7q54nupg","slide":37,"text":"Scalar M11 has the lowest test MSE; vector M11 and Original GMU are close.","textPreview":"Scalar M11 has the lowest test MSE; vector M11 and Original GMU are close.","textChars":74,"textLines":1,"bbox":[350,155,820,58]}
+{"kind":"textbox","id":"sh/cni5s365","slide":37,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[70,247,55,55]}
+{"kind":"textbox","id":"sh/dorm18nq","slide":37,"text":"Contribution","textPreview":"Contribution","textChars":12,"textLines":1,"bbox":[145,247,190,35]}
+{"kind":"textbox","id":"sh/tc329c3y","slide":37,"text":"Dynamic inputs are indispensable, while static influence depends strongly on the mechanism and scale.","textPreview":"Dynamic inputs are indispensable, while static influence depends strongly on the mechanism and scale.","textChars":101,"textLines":1,"bbox":[350,247,820,58]}
+{"kind":"textbox","id":"sh/8bal0rmd","slide":37,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[70,339,55,55]}
+{"kind":"textbox","id":"sh/7a1k7mls","slide":37,"text":"Gating","textPreview":"Gating","textChars":6,"textLines":1,"bbox":[145,339,190,35]}
+{"kind":"textbox","id":"sh/69s3yh4n","slide":37,"text":"Raw gate coefficients are not contribution; effective activation and interventions provide stronger evidence.","textPreview":"Raw gate coefficients are not contribution; effective activation and interventions provide stronger evidence.","textChars":109,"textLines":1,"bbox":[350,339,820,58]}
+{"kind":"textbox","id":"sh/l8j25c32","slide":37,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[70,431,55,55]}
+{"kind":"textbox","id":"sh/k7a1w7mh","slide":37,"text":"Graphs","textPreview":"Graphs","textChars":6,"textLines":1,"bbox":[145,431,190,35]}
+{"kind":"textbox","id":"sh/j61k32lw","slide":37,"text":"Edges help scalar M11, M33 and GMU–GNN, but hurt M7 in the frozen edge-removal test.","textPreview":"Edges help scalar M11, M33 and GMU–GNN, but hurt M7 in the frozen edge-removal test.","textChars":84,"textLines":1,"bbox":[350,431,820,58]}
+{"kind":"textbox","id":"sh/y5sjux4b","slide":37,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[70,523,55,55]}
+{"kind":"textbox","id":"sh/p4n2hw36","slide":37,"text":"Caution","textPreview":"Caution","textChars":7,"textLines":1,"bbox":[145,523,190,35]}
+{"kind":"textbox","id":"sh/43ul8b2l","slide":37,"text":"Associations are descriptive and frozen interventions are not retrained causal baselines.","textPreview":"Associations are descriptive and frozen interventions are not retrained causal baselines.","textChars":89,"textLines":1,"bbox":[350,523,820,58]}
+{"kind":"notes","id":"nt/vunazu","slide":37,"text":"Resolve the opening question: adaptive fusion performs well, but explanation must remain architecture-specific.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}
+{"kind":"slide","id":"sl/cbwxo0","slide":38,"title":"REPRODUCIBILITY","textShapes":17}
+{"kind":"textbox","id":"sh/d0n2pkv6","slide":38,"text":"REPRODUCIBILITY","textPreview":"REPRODUCIBILITY","textChars":15,"textLines":1,"bbox":[64,28,600,22]}
+{"kind":"textbox","id":"sh/qxcju5wf","slide":38,"text":"Every claim can be traced back to an executed notebook","textPreview":"Every claim can be traced back to an executed notebook","textChars":54,"textLines":1,"bbox":[64,56,1152,64]}
+{"kind":"shape","id":"sh/ryl0nad0","slide":38,"bbox":[64,128,1152,2]}
+{"kind":"textbox","id":"sh/4bu1sve9","slide":38,"text":"38","textPreview":"38","textChars":2,"textLines":1,"bbox":[1160,681,55,18]}
+{"kind":"textbox","id":"sh/pc3il0vu","slide":38,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[90,165,18,34]}
+{"kind":"textbox","id":"sh/29cjq5wj","slide":38,"text":"Six notebooks passed complete load-only execution","textPreview":"Six notebooks passed complete load-only execution","textChars":49,"textLines":1,"bbox":[118,165,732,45]}
+{"kind":"textbox","id":"sh/3al0jqd4","slide":38,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[90,231,18,34]}
+{"kind":"textbox","id":"sh/g7a1oved","slide":38,"text":"All checkpoints reported best-validation reload and skipped training","textPreview":"All checkpoints reported best-validation reload and skipped training","textChars":68,"textLines":1,"bbox":[118,231,732,45]}
+{"kind":"textbox","id":"sh/h83ih0vy","slide":38,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[90,297,18,34]}
+{"kind":"textbox","id":"sh/hg3ytofq","slide":38,"text":"Figures were regenerated under results_new","textPreview":"Figures were regenerated under results_new","textChars":42,"textLines":1,"bbox":[118,297,732,45]}
+{"kind":"textbox","id":"sh/gfuhkjy5","slide":38,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[90,363,18,34]}
+{"kind":"textbox","id":"sh/felgrexk","slide":38,"text":"M7 prediction diagnostics were newly added and validated","textPreview":"M7 prediction diagnostics were newly added and validated","textChars":56,"textLines":1,"bbox":[118,363,732,45]}
+{"kind":"textbox","id":"sh/udcfi9gz","slide":38,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[90,429,18,34]}
+{"kind":"textbox","id":"sh/tcjyp4fe","slide":38,"text":"M33 null-embedding output is documented separately, not used as a baseline","textPreview":"M33 null-embedding output is documented separately, not used as a baseline","textChars":74,"textLines":1,"bbox":[118,429,732,45]}
+{"kind":"textbox","id":"sh/sbaxgjy9","slide":38,"text":"•","textPreview":"•","textChars":1,"textLines":1,"bbox":[90,495,18,34]}
+{"kind":"textbox","id":"sh/7a1gnexo","slide":38,"text":"Final deck uses only regenerated evidence","textPreview":"Final deck uses only regenerated evidence","textChars":41,"textLines":1,"bbox":[118,495,732,45]}
+{"kind":"shape","id":"sh/69sfe9g3","slide":38,"bbox":[880,175,260,320]}
+{"kind":"textbox","id":"sh/58jyl4fi","slide":38,"text":"SOURCE OF TRUTH","textPreview":"SOURCE OF TRUTH","textChars":15,"textLines":1,"bbox":[900,200,220,30]}
+{"kind":"textbox","id":"sh/knaxczyx","slide":38,"text":"results_new\n+ notebook\ninterpretation\n+ checkpoint\nmetadata","textPreview":"results_new | + notebook | interpretation | + checkpoint | metadata","textChars":59,"textLines":5,"bbox":[905,250,210,190]}
+{"kind":"notes","id":"nt/cbwxo0","slide":38,"text":"Close on reproducibility and the remaining research limitation: matched-seed retraining is still needed for training-variance inference.\n\n[Sources]\n- Internal validated notebooks and results_new outputs in D:/data_fusion"}

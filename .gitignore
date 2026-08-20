@@ -46,6 +46,9 @@ results_old/
 results_new/
 *.presentation_deps
 *.validation_deps
+.codex_build
+.codex_deck_v2
+.codex_deck_comparison_v2
 runs/
 *.pdf
 *.pptx
